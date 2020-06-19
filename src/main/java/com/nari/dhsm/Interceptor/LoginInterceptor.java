@@ -19,8 +19,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response, Object handler) throws Exception {
         this.log.info("[****LoginInterceptor.preHandle****" );
-
-
        return true;
 
     }
