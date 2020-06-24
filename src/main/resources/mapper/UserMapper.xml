@@ -21,7 +21,7 @@
 		SELECT count(*)
 		FROM info_user
 		WHERE
-			phone = #{phone,jdbcType = VARCHAR} AND
+			phone = #{username,jdbcType = VARCHAR} AND
 			password = #{password,jdbcType = VARCHAR}
 	</select>
 

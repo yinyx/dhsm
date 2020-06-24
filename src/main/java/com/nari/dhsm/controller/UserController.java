@@ -24,7 +24,8 @@ import java.util.Map;
  * @version 1.0 2020/6/19
  */
 
-@RestController(value="user")
+@RestController
+@RequestMapping(value="/user")
 @Api(value="/user",tags = {"用户接口"},description = "用户接口Api")
 public class UserController {
     private Logger log = LoggerFactory.getLogger(UserController.class);
@@ -36,15 +37,19 @@ public class UserController {
     @ApiOperation("登录校验")
     public JSONObject userAuthCheck(@RequestParam Map<String,Object> userMap,HttpSession session){
         log.info("==== 进行登录校验 ====");
-        if(userMap.get("phone").toString().length() != 11){
+        if(userMap.get("username").toString().length() != 11){
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("code",ErrorCodeEnum.E01_1000.getCode());
             jsonObject.put("message",ErrorCodeEnum.E01_1000.getMessage());
             return jsonObject;
         }
         if(userService.loginVoCheck(userMap)){
+            JSONObject jsonObject = new JSONObject();
             session.setAttribute("userMap", userMap);
-            return JSONObject.fromObject(userMap);
+            jsonObject.put("code",ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
+            jsonObject.put("data",userMap);
+            return jsonObject;
         }else{
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("code",ErrorCodeEnum.E01_1001.getCode());

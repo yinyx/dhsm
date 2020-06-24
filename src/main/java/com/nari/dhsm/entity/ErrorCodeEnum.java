@@ -9,10 +9,10 @@ public enum ErrorCodeEnum {
      * 命名约定：E【功能模块码】_【错误码】
      * 按模块设置返回前端详细内容，前端根据描述和错误码进行界面反馈
      */
-    E00_0001("00","通用","000001","成功"),
+    E00_0001("00","通用",20000,"成功"),
 
-    E01_1000("01","登录","001000","密码长度不符"),
-    E01_1001("01","登录","001001","登录校验不通过");
+    E01_1000("01","登录",001000,"密码长度不符"),
+    E01_1001("01","登录",001001,"登录校验不通过");
 
 
     private String functionCode;
@@ -20,7 +20,7 @@ public enum ErrorCodeEnum {
     /**
      * 由功能模块代码和错误代码组成
      */
-    private String code;
+    private int code;
     private String message;
 
     /**
@@ -30,7 +30,7 @@ public enum ErrorCodeEnum {
      * @param code  错误码
      * @param message   错误描述
      */
-    ErrorCodeEnum(String functionCode,String functionDesc,String code,String message){
+    ErrorCodeEnum(String functionCode,String functionDesc,int code,String message){
         this.functionCode = functionCode;
         this.functionDesc = functionDesc;
         this.code = code;
@@ -54,11 +54,11 @@ public enum ErrorCodeEnum {
         this.functionDesc = functionDesc;
     }
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
