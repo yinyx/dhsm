@@ -57,4 +57,15 @@ public class UserController {
             return jsonObject;
         }
     }
+
+    @RequestMapping(value="/logout",method= RequestMethod.POST)
+    @ApiOperation("注销")
+    public JSONObject loginOut(HttpSession session){
+        log.info("==== 注销登录 ====");
+        session.removeAttribute("userMap");
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("code",ErrorCodeEnum.E00_0001.getCode());
+        jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
+        return jsonObject;
+    }
 }
