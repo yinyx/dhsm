@@ -1,13 +1,12 @@
 package com.nari.dhsm.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.nari.dhsm.Interceptor.LoginInterceptor;
 import com.nari.dhsm.entity.ErrorCodeEnum;
 import com.nari.dhsm.entity.LoginVo;
 import com.nari.dhsm.service.UserService;
 import io.netty.handler.codec.json.JsonObjectDecoder;
 import io.swagger.annotations.*;
-import net.sf.json.JSON;
-import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,7 @@ public class UserController {
 
     @RequestMapping(value="/login",method= RequestMethod.POST)
     @ApiOperation("登录校验")
-    public JSONObject userAuthCheck(@RequestParam Map<String,Object> userMap,HttpSession session){
+    public JSONObject userAuthCheck(@RequestParam Map<String,Object> userMap, HttpSession session){
         log.info("==== 进行登录校验 ====");
         if(userMap.get("username").toString().length() != 11){
             JSONObject jsonObject = new JSONObject();

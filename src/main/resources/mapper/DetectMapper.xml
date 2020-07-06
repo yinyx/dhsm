@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nari.dhsm.dao.DetectMapper">
+    <resultMap id="StationResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="number" column="number" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="DeviceResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="model" column="model" jdbcType="VARCHAR"/>
+        <result property="online" column="online" jdbcType="INTEGER"/>
+        <result property="ipAddress" column="ip_address" jdbcType="VARCHAR"/>
+        <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="getStationMap" resultMap="StationResultMap">
+        select
+            id,
+            number,
+            name,
+            address,
+            remark
+        from info_station
+    </select>
+
+    <select id="getStationStatus" resultType="java.lang.Boolean">
+        select count(*)
+            from info_protect_device
+        WHERE 1=1
+        <if test='stationId != null'>
+          AND station_id = #{stationId,jdbcType=VARCHAR}
+        </if>
+          AND alarm_flag = 1
+    </select>
+
+    <select id="getDeviceMap" resultMap="DeviceResultMap" parameterType="java.lang.String">
+        select
+            id,
+            name,
+            model,
+            online,
+            ip_address,
+            alarm_flag
+        from info_protect_device
+          WHERE 1=1
+        <if test='stationId != null'>
+            AND station_id = #{stationId,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <select id="getHmoduleStatus" resultType="java.lang.Boolean">
+        select count(*)
+        from info_board_config
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
+        AND alarm_flag = 1
+    </select>
+
+    <select id="getSmoduleStatus" resultType="java.lang.Boolean">
+        select count(*)
+        from dev_online_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
+        AND alarm_flag = 1
+        AND src != 0
+    </select>
+
+</mapper>
