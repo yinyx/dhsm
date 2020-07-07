@@ -29,10 +29,9 @@ public interface DetectMapper {
 
     /**
      * 根据变电站Id获取设备信息
-     * @param stationId
      * @return
      */
-    List<HashMap<String,Object>> getDeviceMap(String stationId);
+    List<HashMap<String,Object>> getDeviceMap();
 
     /**
      * 根据设备Id 获取硬件模块状态
@@ -47,4 +46,11 @@ public interface DetectMapper {
      * @return
      */
     Boolean getSmoduleStatus(String deviceId);
+
+    /**
+     * 根据设备Id获取插件信息
+     * @param deviceId
+     * @return
+     */
+    List<HashMap<String,Object>> getHardwarePluginMap(String deviceId);
 }

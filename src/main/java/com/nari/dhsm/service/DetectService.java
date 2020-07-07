@@ -10,9 +10,11 @@ import java.util.Map;
  */
 public interface DetectService {
 
-    List<HashMap<String,Object>>  getStationInfo();
+    List<HashMap<String,Object>>  getStationInfoList();
 
-    List<HashMap<String,Object>>  getDeviceInfo(String stationId);
+    List<HashMap<String,Object>>  getDeviceInfoList();
 
-    List<HashMap<String,Object>>  getModuleInfo(String deviceId);
+    List<HashMap<String,Object>>  getModuleInfoList(String deviceId);
+
+    List<HashMap<String,Object>>  getPluginInfoList(String deviceId,int src);
 }

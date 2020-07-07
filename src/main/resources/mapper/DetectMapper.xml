@@ -19,6 +19,14 @@
         <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
     </resultMap>
 
+    <resultMap id="HardwarePluginResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="device" column="device" jdbcType="VARCHAR"/>
+        <result property="name" column="plugin_type" jdbcType="VARCHAR"/>
+        <result property="slot" column="slot" jdbcType="INTEGER"/>
+        <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
+    </resultMap>
+
     <select id="getStationMap" resultMap="StationResultMap">
         select
             id,
@@ -39,7 +47,7 @@
           AND alarm_flag = 1
     </select>
 
-    <select id="getDeviceMap" resultMap="DeviceResultMap" parameterType="java.lang.String">
+    <select id="getDeviceMap" resultMap="DeviceResultMap" >
         select
             id,
             name,
@@ -48,10 +56,6 @@
             ip_address,
             alarm_flag
         from info_protect_device
-          WHERE 1=1
-        <if test='stationId != null'>
-            AND station_id = #{stationId,jdbcType=VARCHAR}
-        </if>
     </select>
 
     <select id="getHmoduleStatus" resultType="java.lang.Boolean">
@@ -73,6 +77,20 @@
         </if>
         AND alarm_flag = 1
         AND src != 0
+    </select>
+
+    <select id="getHardwarePluginMap" resultMap="HardwarePluginResultMap">
+        select
+          id,
+          device,
+          plugin_type,
+          slot,
+          alarm_flag
+        FROM info_board_config
+        WHERE 1 = 1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
     </select>
 
 </mapper>

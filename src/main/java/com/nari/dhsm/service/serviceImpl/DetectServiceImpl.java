@@ -22,7 +22,7 @@ public class DetectServiceImpl implements DetectService {
 
 
     @Override
-    public List<HashMap<String, Object>> getStationInfo() {
+    public List<HashMap<String, Object>> getStationInfoList() {
         List<HashMap<String,Object>> stationList = detectMapper.getStationMap();
         Iterator<HashMap<String,Object>> iterator = stationList.iterator();
         while(iterator.hasNext()){//遍历所有变电站信息，如有设备报警则将显示图标置为报错
@@ -39,8 +39,8 @@ public class DetectServiceImpl implements DetectService {
     }
 
     @Override
-    public List<HashMap<String, Object>> getDeviceInfo(String stationId) {
-        List<HashMap<String,Object>> deviceList = detectMapper.getDeviceMap(stationId);
+    public List<HashMap<String, Object>> getDeviceInfoList() {
+        List<HashMap<String,Object>> deviceList = detectMapper.getDeviceMap();
         Iterator<HashMap<String,Object>> iterator = deviceList.iterator();
 
         while(iterator.hasNext()){//遍历设备列表，如有报错则将显示图标置为报错
@@ -62,35 +62,64 @@ public class DetectServiceImpl implements DetectService {
     }
 
     @Override
-    public List<HashMap<String, Object>> getModuleInfo(String deviceId) {
-        HashMap<String,Object> HmoduleMap = new HashMap<>();
-        HashMap<String,Object> SmoduleMap = new HashMap<>();
+    public List<HashMap<String, Object>> getModuleInfoList(String deviceId) {
+        HashMap<String,Object> hmoduleMap = new HashMap<>();
+        HashMap<String,Object> smoduleMap = new HashMap<>();
         if(detectMapper.getHmoduleStatus(deviceId)){
-            HmoduleMap.put("id",deviceId);
-            HmoduleMap.put("name","硬件模块");
-            HmoduleMap.put("icon","fault");
-            HmoduleMap.put("leaf","false");
+            hmoduleMap.put("id",0);
+            hmoduleMap.put("name","硬件模块");
+            hmoduleMap.put("icon","fault");
+            hmoduleMap.put("leaf","false");
+            hmoduleMap.put("deviceId",deviceId);
         }else{
-            HmoduleMap.put("id",deviceId);
-            HmoduleMap.put("name","硬件模块");
-            HmoduleMap.put("icon","normal");
-            HmoduleMap.put("leaf","false");
+            hmoduleMap.put("id",0);
+            hmoduleMap.put("name","硬件模块");
+            hmoduleMap.put("icon","normal");
+            hmoduleMap.put("leaf","false");
+            hmoduleMap.put("deviceId",deviceId);
         }
 
         if(detectMapper.getSmoduleStatus(deviceId)){
-            SmoduleMap.put("id",deviceId);
-            HmoduleMap.put("name","软件模块");
-            HmoduleMap.put("icon","fault");
-            HmoduleMap.put("leaf","false");
+            smoduleMap.put("id",1);
+            smoduleMap.put("name","软件模块");
+            smoduleMap.put("icon","fault");
+            smoduleMap.put("leaf","true");
+            smoduleMap.put("deviceId",deviceId);
         }else{
-            SmoduleMap.put("id",deviceId);
-            HmoduleMap.put("name","软件模块");
-            HmoduleMap.put("icon","normal");
-            HmoduleMap.put("leaf","false");
+            smoduleMap.put("id",1);
+            smoduleMap.put("name","软件模块");
+            smoduleMap.put("icon","normal");
+            smoduleMap.put("leaf","true");
+            smoduleMap.put("deviceId",deviceId);
         }
         List<HashMap<String,Object>> arrList = new ArrayList<>();
-        arrList.add(HmoduleMap);
-        arrList.add(SmoduleMap);
+        arrList.add(hmoduleMap);
+        arrList.add(smoduleMap);
         return arrList;
+    }
+
+    @Override
+    public List<HashMap<String, Object>> getPluginInfoList(String deviceId ,int src) {
+        List<HashMap<String,Object>> hPluginList = new ArrayList<>();
+        if(src == 0){
+             hPluginList = detectMapper.getHardwarePluginMap(deviceId);
+            Iterator<HashMap<String,Object>> iterator = hPluginList.iterator();
+            while(iterator.hasNext()){//遍历设备列表，如有报错则将显示图标置为报错
+                HashMap<String,Object> hPluginMap = iterator.next();
+                if(hPluginMap.get("alarmFlag").equals(1)){
+                    String name = hPluginMap.get("name") + " 槽号：" + hPluginMap.get("slot");
+                    hPluginMap.put("name",name);
+                    hPluginMap.put("icon","fault");
+                    hPluginMap.put("leaf","true");
+                }else{
+                    String name = hPluginMap.get("name") + " 槽号：" + hPluginMap.get("slot");
+                    hPluginMap.put("name",name);
+                    hPluginMap.put("icon","normal");
+                    hPluginMap.put("leaf","true");
+                }
+            }
+            return hPluginList;
+        }
+        return hPluginList;
     }
 }
