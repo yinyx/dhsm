@@ -8,7 +8,7 @@ import java.util.Map;
  * @author yinyx
  * @version 1.0 2020/7/2
  */
-public interface DetectService {
+public interface TreeService {
 
     List<HashMap<String,Object>>  getStationInfoList();
 

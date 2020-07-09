@@ -1,7 +1,7 @@
 package com.nari.dhsm.service.serviceImpl;
 
-import com.nari.dhsm.dao.DetectMapper;
-import com.nari.dhsm.service.DetectService;
+import com.nari.dhsm.dao.TreeDataMapper;
+import com.nari.dhsm.service.TreeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,19 +15,19 @@ import java.util.List;
  * @version 1.0 2020/7/2
  */
 @Service
-public class DetectServiceImpl implements DetectService {
+public class TreeServiceImpl implements TreeService {
 
     @Autowired
-    private DetectMapper detectMapper;
+    private TreeDataMapper treeDataMapper;
 
 
     @Override
     public List<HashMap<String, Object>> getStationInfoList() {
-        List<HashMap<String,Object>> stationList = detectMapper.getStationMap();
+        List<HashMap<String,Object>> stationList = treeDataMapper.getStationMap();
         Iterator<HashMap<String,Object>> iterator = stationList.iterator();
         while(iterator.hasNext()){//遍历所有变电站信息，如有设备报警则将显示图标置为报错
             HashMap<String,Object> stationMap = iterator.next();
-            if(detectMapper.getStationStatus((String) stationMap.get("id"))){
+            if(treeDataMapper.getStationStatus((String) stationMap.get("id"))){
                 stationMap.put("icon","fault");
                 stationMap.put("leaf","false");
             }else{
@@ -40,7 +40,7 @@ public class DetectServiceImpl implements DetectService {
 
     @Override
     public List<HashMap<String, Object>> getDeviceInfoList() {
-        List<HashMap<String,Object>> deviceList = detectMapper.getDeviceMap();
+        List<HashMap<String,Object>> deviceList = treeDataMapper.getDeviceMap();
         Iterator<HashMap<String,Object>> iterator = deviceList.iterator();
 
         while(iterator.hasNext()){//遍历设备列表，如有报错则将显示图标置为报错
@@ -65,7 +65,7 @@ public class DetectServiceImpl implements DetectService {
     public List<HashMap<String, Object>> getModuleInfoList(String deviceId) {
         HashMap<String,Object> hmoduleMap = new HashMap<>();
         HashMap<String,Object> smoduleMap = new HashMap<>();
-        if(detectMapper.getHmoduleStatus(deviceId)){
+        if(treeDataMapper.getHmoduleStatus(deviceId)){
             hmoduleMap.put("id",0);
             hmoduleMap.put("name","硬件模块");
             hmoduleMap.put("icon","fault");
@@ -79,7 +79,7 @@ public class DetectServiceImpl implements DetectService {
             hmoduleMap.put("deviceId",deviceId);
         }
 
-        if(detectMapper.getSmoduleStatus(deviceId)){
+        if(treeDataMapper.getSmoduleStatus(deviceId)){
             smoduleMap.put("id",1);
             smoduleMap.put("name","软件模块");
             smoduleMap.put("icon","fault");
@@ -102,7 +102,7 @@ public class DetectServiceImpl implements DetectService {
     public List<HashMap<String, Object>> getPluginInfoList(String deviceId ,int src) {
         List<HashMap<String,Object>> hPluginList = new ArrayList<>();
         if(src == 0){
-             hPluginList = detectMapper.getHardwarePluginMap(deviceId);
+             hPluginList = treeDataMapper.getHardwarePluginMap(deviceId);
             Iterator<HashMap<String,Object>> iterator = hPluginList.iterator();
             while(iterator.hasNext()){//遍历设备列表，如有报错则将显示图标置为报错
                 HashMap<String,Object> hPluginMap = iterator.next();

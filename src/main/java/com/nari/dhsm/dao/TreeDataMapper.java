@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Mapper
 @Repository
-public interface DetectMapper {
+public interface TreeDataMapper {
 
     /**
      * 获取变电站信息
@@ -53,4 +53,5 @@ public interface DetectMapper {
      * @return
      */
     List<HashMap<String,Object>> getHardwarePluginMap(String deviceId);
+
 }
