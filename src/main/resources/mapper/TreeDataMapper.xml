@@ -60,7 +60,7 @@
 
     <select id="getHmoduleStatus" resultType="java.lang.Boolean">
         select count(*)
-        from info_board_config
+        from info_plugin_config
         WHERE 1=1
         <if test='deviceId != null'>
             AND device = #{deviceId,jdbcType=VARCHAR}
@@ -86,7 +86,7 @@
           plugin_type,
           slot,
           alarm_flag
-        FROM info_board_config
+        FROM info_plugin_config
         WHERE 1 = 1
         <if test='deviceId != null'>
             AND device = #{deviceId,jdbcType=VARCHAR}

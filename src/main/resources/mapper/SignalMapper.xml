@@ -2,5 +2,44 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nari.dhsm.dao.SignalMapper">
+    <resultMap id="SoftSignalResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="device" column="device" jdbcType="VARCHAR"/>
+        <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
+        <result property="value" column="value" jdbcType="FLOAT"/>
+        <result property="signalId" column="signal_id" jdbcType="VARCHAR"/>
+        <result property="src" column="src" jdbcType="INTEGER"/>
+        <result property="valid" column="valid" jdbcType="INTEGER"/>
+        <result property="mDescription" column="m_description" jdbcType="VARCHAR"/>
+        <result property="cDescription" column="c_description" jdbcType="VARCHAR"/>
+        <result property="model" column="model" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="online" column="online" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <select id="querySoftMonitorSignal" resultMap="SoftSignalResultMap">
+        select DISTINCT
+          s1.id,
+          s1.device,
+          s1.alarm_flag,
+          value,
+          signal_id,
+          src,
+          valid,
+          s2.description as m_description,
+          s3.description as c_description,
+          d1.model,
+          d1.name,
+          d1.online
+        FROM dev_online_signal s1
+        LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id
+        LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id
+        LEFT JOIN info_protect_device d1 on s1.device = d1.id
+        WHERE device = #{device,jdbcType=VARCHAR}
+        AND src != 0
+    </select>
+
+
 
 </mapper>

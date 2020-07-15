@@ -2,7 +2,7 @@ package com.nari.dhsm.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.nari.dhsm.entity.ErrorCodeEnum;
-import com.nari.dhsm.service.TreeService;
+import com.nari.dhsm.service.SignalService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -28,16 +28,16 @@ public class SignalController {
     private Logger log = LoggerFactory.getLogger(SignalController.class);
 
     @Autowired
-    private TreeService treeService;
+    private SignalService signalService;
 
-    @RequestMapping(value="/getUserStationList",method= RequestMethod.POST)
-    @ApiOperation("获取变电站列表信息")
-    public JSONObject getUserStationList(){
-        log.info("==== 获取变电站列表信息 ====");
+    @RequestMapping(value="/getSoftSignalList",method= RequestMethod.POST)
+    @ApiOperation("获取软件信号")
+    public JSONObject getSoftSignalList(@RequestParam Map<String,Object> map){
+        log.info("==== 获取软件信号 ====");
         JSONObject jsonObject = new JSONObject();
         try {
-            List<HashMap<String, Object>> stationList = treeService.getStationInfoList();
-                jsonObject.put("list", stationList);
+            List<HashMap<String, Object>> softSignalList = signalService.querySoftMonitorSignal((String) map.get("deviceId"));
+                jsonObject.put("list", softSignalList);
                 jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
                 jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
             return jsonObject;
@@ -48,58 +48,6 @@ public class SignalController {
         }
     }
 
-    @RequestMapping(value="/getDeviceList",method= RequestMethod.POST)
-    @ApiOperation("获取设备列表信息")
-    public JSONObject getDeviceList(){
-        log.info("==== 获取设备列表信息 ====");
-        JSONObject jsonObject = new JSONObject();
-        try {
-            List<HashMap<String, Object>> deviceList = treeService.getDeviceInfoList();
-                jsonObject.put("list", deviceList);
-                jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
-                jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
-            return jsonObject;
-        }catch (Exception e){
-                jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
-                jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
-            return jsonObject;
-        }
-    }
 
-    @RequestMapping(value="/getModuleList",method= RequestMethod.POST)
-    @ApiOperation("获取模块列表信息")
-    public JSONObject getModuleList(@RequestParam Map<String,Object> map){
-        log.info("==== 获取模块列表信息 ====");
-        JSONObject jsonObject = new JSONObject();
-        try{
-            List<HashMap<String,Object>> moduleList = treeService.getModuleInfoList((String) map.get("deviceId"));
-                jsonObject.put("list",moduleList);
-                jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
-                jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
-            return jsonObject;
-        }catch (Exception e){
-            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
-            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
-            return jsonObject;
-        }
-    }
-
-    @RequestMapping(value="/getPluginList",method= RequestMethod.POST)
-    @ApiOperation("获取插件列表信息")
-    public JSONObject getPluginList(@RequestParam Map<String,Object> map){
-        log.info("==== 获取插件列表信息 ====");
-        JSONObject jsonObject = new JSONObject();
-        try{
-            List<HashMap<String,Object>> pluginList = treeService.getPluginInfoList((String) map.get("deviceId"), Integer.valueOf((String) map.get("src")));
-            jsonObject.put("list",pluginList);
-            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
-            jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
-            return jsonObject;
-        }catch (Exception e){
-            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
-            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
-            return jsonObject;
-        }
-    }
 
 }
