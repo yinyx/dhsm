@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nari.dhsm.dao.AlarmMapper">
+    <resultMap id="AlarmResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="number" column="number" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 根据设备Id获取报警信息 -->
+    <select id="getAlarmMap" resultType="java.util.HashMap">
+        select *
+        from dev_history_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
+        AND alarm_flag = 1
+    </select>
+
+    <!--  根据设备Id获取报警数目 -->
+    <select id="getAlarmNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_history_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
+        AND alarm_flag = 1
+    </select>
+
+    <!--  根据设备Id,报警记录Id设置该条报警记录状态为已处理 -->
+    <update id="setAlarmStatus" parameterType="java.util.HashMap">
+        UPDATE dev_history_signal
+        SET
+            alarm_status=1
+        WHERE
+            device = #{deviceId}
+        AND
+              id = #{alarmId}
+    </update>
+
+    <!-- 根据设备Id,报警记录Id,批次id获取当前批次的所有监测信号值 -->
+    <select id="getSignalMap" resultType="java.util.HashMap">
+        select *
+        from dev_history_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
+        AND call_id = #{callId}
+        AND id != #{alarmId}
+    </select>
+</mapper>
