@@ -10,6 +10,6 @@ import java.util.List;
 public interface SignalService {
 
 
-    List<HashMap<String,Object>> querySoftMonitorSignal(String deviceId);
+    List<HashMap<String,Object>> getBlockSignalList(String deviceId,Integer type);
 
 }

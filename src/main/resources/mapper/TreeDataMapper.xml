@@ -56,6 +56,7 @@
             ip_address,
             alarm_flag
         from info_protect_device
+        WHERE online = 1
     </select>
 
     <select id="getHmoduleStatus" resultType="java.lang.Boolean">

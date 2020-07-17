@@ -1,14 +1,12 @@
 package com.nari.dhsm.service.serviceImpl;
 
+import com.nari.dhsm.dao.SignalMapper;
 import com.nari.dhsm.dao.TreeDataMapper;
 import com.nari.dhsm.service.TreeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author yinyx
@@ -19,7 +17,8 @@ public class TreeServiceImpl implements TreeService {
 
     @Autowired
     private TreeDataMapper treeDataMapper;
-
+    @Autowired
+    private SignalMapper signalMapper;
 
     @Override
     public List<HashMap<String, Object>> getStationInfoList() {
@@ -71,26 +70,30 @@ public class TreeServiceImpl implements TreeService {
             hmoduleMap.put("icon","fault");
             hmoduleMap.put("leaf","false");
             hmoduleMap.put("deviceId",deviceId);
+            hmoduleMap.put("type",100);
         }else{
             hmoduleMap.put("id",0);
             hmoduleMap.put("name","硬件模块");
             hmoduleMap.put("icon","normal");
             hmoduleMap.put("leaf","false");
             hmoduleMap.put("deviceId",deviceId);
+            hmoduleMap.put("type",100);
         }
 
         if(treeDataMapper.getSmoduleStatus(deviceId)){
             smoduleMap.put("id",1);
             smoduleMap.put("name","软件模块");
             smoduleMap.put("icon","fault");
-            smoduleMap.put("leaf","true");
+            smoduleMap.put("leaf","false");
             smoduleMap.put("deviceId",deviceId);
+            smoduleMap.put("type",111);
         }else{
             smoduleMap.put("id",1);
             smoduleMap.put("name","软件模块");
             smoduleMap.put("icon","normal");
-            smoduleMap.put("leaf","true");
+            smoduleMap.put("leaf","false");
             smoduleMap.put("deviceId",deviceId);
+            smoduleMap.put("type",111);
         }
         List<HashMap<String,Object>> arrList = new ArrayList<>();
         arrList.add(hmoduleMap);
@@ -108,18 +111,100 @@ public class TreeServiceImpl implements TreeService {
                 HashMap<String,Object> hPluginMap = iterator.next();
                 if(hPluginMap.get("alarmFlag").equals(1)){
                     String name = hPluginMap.get("name") + " 槽号：" + hPluginMap.get("slot");
-                    hPluginMap.put("name",name);
                     hPluginMap.put("icon","fault");
-                    hPluginMap.put("leaf","true");
+                    hPluginMap.put("leaf",true);
+                    hPluginMap.put("type",hPluginMap.get("name"));
+                    hPluginMap.put("name",name);
+                    hPluginMap.put("slot", hPluginMap.get("slot"));
                 }else{
                     String name = hPluginMap.get("name") + " 槽号：" + hPluginMap.get("slot");
+                    hPluginMap.put("type",hPluginMap.get("name"));
                     hPluginMap.put("name",name);
                     hPluginMap.put("icon","normal");
-                    hPluginMap.put("leaf","true");
+                    hPluginMap.put("leaf",true);
+                    hPluginMap.put("slot", hPluginMap.get("slot"));
                 }
             }
             return hPluginList;
         }
         return hPluginList;
+    }
+
+    @Override
+    public List<HashMap<String, Object>> getSignalTypeList(String deviceId) {
+        List<HashMap<String,Object>> signalTypeList = new ArrayList<>();
+        HashMap<String,Object> firTypeMap = new HashMap<>();
+        HashMap<String,Object> secTypeMap = new HashMap<>();
+        HashMap<String,Object> thirdTypeMap = new HashMap<>();
+        HashMap<String,Object> forthTypeMap = new HashMap<>();
+
+        if(signalMapper.checkFirstSignal(deviceId,0)){
+                firTypeMap.put("id", UUID.randomUUID().toString());
+                firTypeMap.put("name","闭锁信号");
+                firTypeMap.put("icon","fault");
+                firTypeMap.put("leaf",true);
+                firTypeMap.put("type",0);
+                firTypeMap.put("deviceId",deviceId);
+            }else{
+                firTypeMap.put("id", UUID.randomUUID().toString());
+                firTypeMap.put("name","闭锁信号");
+                firTypeMap.put("icon","normal");
+                firTypeMap.put("leaf",true);
+                firTypeMap.put("type",0);
+                firTypeMap.put("deviceId",deviceId);
+            }
+        if(signalMapper.checkSecSignal(deviceId,1)){
+            secTypeMap.put("id", UUID.randomUUID().toString());
+            secTypeMap.put("name","告警信号");
+            secTypeMap.put("icon","fault");
+            secTypeMap.put("leaf",true);
+            secTypeMap.put("type",1);
+            secTypeMap.put("deviceId",deviceId);
+        }else{
+            secTypeMap.put("id", UUID.randomUUID().toString());
+            secTypeMap.put("name","告警信号");
+            secTypeMap.put("icon","normal");
+            secTypeMap.put("leaf",true);
+            secTypeMap.put("type",1);
+            secTypeMap.put("deviceId",deviceId);
+        }
+
+        if(signalMapper.checkThirdSignal(deviceId,2)){
+            thirdTypeMap.put("id", UUID.randomUUID().toString());
+            thirdTypeMap.put("name","智能板卡报警闭锁信号");
+            thirdTypeMap.put("icon","fault");
+            thirdTypeMap.put("leaf",true);
+            thirdTypeMap.put("type",2);
+            thirdTypeMap.put("deviceId",deviceId);
+        }else{
+            thirdTypeMap.put("id", UUID.randomUUID().toString());
+            thirdTypeMap.put("name","智能板卡报警闭锁信号");
+            thirdTypeMap.put("icon","normal");
+            thirdTypeMap.put("leaf",true);
+            thirdTypeMap.put("type",2);
+            thirdTypeMap.put("deviceId",deviceId);
+        }
+        if(signalMapper.checkForthSignal(deviceId,3)){
+            forthTypeMap.put("id", UUID.randomUUID().toString());
+            forthTypeMap.put("name","B02额外报警信号");
+            forthTypeMap.put("icon","fault");
+            forthTypeMap.put("leaf",true);
+            forthTypeMap.put("type",3);
+            forthTypeMap.put("deviceId",deviceId);
+        }else{
+            forthTypeMap.put("id", UUID.randomUUID().toString());
+            forthTypeMap.put("name","B02额外报警信号");
+            forthTypeMap.put("icon","normal");
+            forthTypeMap.put("leaf",true);
+            forthTypeMap.put("type",3);
+            forthTypeMap.put("deviceId",deviceId);
+        }
+
+        signalTypeList.add(firTypeMap);
+        signalTypeList.add(secTypeMap);
+        signalTypeList.add(thirdTypeMap);
+        signalTypeList.add(forthTypeMap);
+
+        return signalTypeList;
     }
 }

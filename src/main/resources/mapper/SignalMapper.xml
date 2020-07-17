@@ -2,24 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nari.dhsm.dao.SignalMapper">
-    <resultMap id="SoftSignalResultMap" type="java.util.HashMap">
+
+    <resultMap id="BlockSignalResultMap" type="java.util.HashMap">
         <result property="id" column="id" jdbcType="VARCHAR"/>
-        <result property="device" column="device" jdbcType="VARCHAR"/>
+        <result property="deviceId" column="device" jdbcType="VARCHAR"/>
         <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
         <result property="value" column="value" jdbcType="FLOAT"/>
         <result property="signalId" column="signal_id" jdbcType="VARCHAR"/>
         <result property="src" column="src" jdbcType="INTEGER"/>
         <result property="valid" column="valid" jdbcType="INTEGER"/>
-        <result property="mDescription" column="m_description" jdbcType="VARCHAR"/>
-        <result property="cDescription" column="c_description" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
         <result property="model" column="model" jdbcType="VARCHAR"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
-        <result property="online" column="online" jdbcType="INTEGER"/>
     </resultMap>
 
 
-    <select id="querySoftMonitorSignal" resultMap="SoftSignalResultMap">
-        select DISTINCT
+    <select id="getBlockSignalList" resultMap="BlockSignalResultMap">
+       select DISTINCT
           s1.id,
           s1.device,
           s1.alarm_flag,
@@ -27,19 +26,57 @@
           signal_id,
           src,
           valid,
-          s2.description as m_description,
-          s3.description as c_description,
+          COALESCE(s2.description,s3.description) as description,
           d1.model,
-          d1.name,
-          d1.online
+          d1.name
         FROM dev_online_signal s1
         LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id
         LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id
         LEFT JOIN info_protect_device d1 on s1.device = d1.id
-        WHERE device = #{device,jdbcType=VARCHAR}
+        WHERE device = #{deviceId,jdbcType=VARCHAR}
+				AND (s2.type = #{type,jdbcType=INTEGER} or s3.type=#{type,jdbcType=INTEGER})
         AND src != 0
     </select>
 
 
-
+    <select id="checkFirstSignal" resultType="java.lang.Boolean">
+      SELECT count(*) FROM `dev_online_signal`
+      left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id
+      left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
+      where
+        device = #{deviceId,jdbcType=VARCHAR} and
+          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          and dev_online_signal.alarm_flag = 1
+    </select>
+    <select id="checkSecSignal" resultType="java.lang.Boolean">
+      SELECT count(*) FROM `dev_online_signal`
+      left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id
+      left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
+      where
+        device = #{deviceId,jdbcType=VARCHAR} and
+          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          and dev_online_signal.alarm_flag = 1
+    </select>
+    <select id="checkThirdSignal" resultType="java.lang.Boolean">
+      SELECT count(*) FROM `dev_online_signal`
+      left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id
+      left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
+      where
+        device = #{deviceId,jdbcType=VARCHAR} and
+          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          and dev_online_signal.alarm_flag = 1
+    </select>
+    <select id="checkForthSignal" resultType="java.lang.Boolean">
+      SELECT count(*) FROM `dev_online_signal`
+      left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id
+      left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
+      where
+        device = #{deviceId,jdbcType=VARCHAR} and
+          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          and dev_online_signal.alarm_flag = 1
+    </select>
 </mapper>

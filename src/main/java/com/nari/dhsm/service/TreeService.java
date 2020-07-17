@@ -17,4 +17,6 @@ public interface TreeService {
     List<HashMap<String,Object>>  getModuleInfoList(String deviceId);
 
     List<HashMap<String,Object>>  getPluginInfoList(String deviceId,int src);
+
+    List<HashMap<String,Object>>  getSignalTypeList(String deviceId);
 }

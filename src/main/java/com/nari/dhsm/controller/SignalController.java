@@ -22,22 +22,22 @@ import java.util.Map;
  * @version 1.0 2020/7/2
  */
 @RestController
-@RequestMapping(value="/status/softSignal")
-@Api(value="/status/softSignal",tags = {"软件信号接口"},description = "软件信号接口Api")
+@RequestMapping(value="/status/signal")
+@Api(value="/status/signal",tags = {"软件信号接口"},description = "软件信号接口Api")
 public class SignalController {
     private Logger log = LoggerFactory.getLogger(SignalController.class);
 
     @Autowired
     private SignalService signalService;
 
-    @RequestMapping(value="/getSoftSignalList",method= RequestMethod.POST)
+    @RequestMapping(value="/getSoftSignal",method= RequestMethod.POST)
     @ApiOperation("获取软件信号")
-    public JSONObject getSoftSignalList(@RequestParam Map<String,Object> map){
+    public JSONObject getSoftSignal(@RequestParam Map<String,Object> map){
         log.info("==== 获取软件信号 ====");
         JSONObject jsonObject = new JSONObject();
         try {
-            List<HashMap<String, Object>> softSignalList = signalService.querySoftMonitorSignal((String) map.get("deviceId"));
-                jsonObject.put("list", softSignalList);
+            List<HashMap<String, Object>> blockSignalList = signalService.getBlockSignalList((String) map.get("deviceId"),Integer.valueOf((String) map.get("type")));
+                jsonObject.put("list", blockSignalList);
                 jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
                 jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
             return jsonObject;

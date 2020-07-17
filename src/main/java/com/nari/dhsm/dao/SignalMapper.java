@@ -14,6 +14,13 @@ import java.util.List;
 @Repository
 public interface SignalMapper {
 
-    List<HashMap<String,Object>> querySoftMonitorSignal(String deviceId);
+    List<HashMap<String,Object>> getBlockSignalList(String deviceId,Integer type);
 
+    Boolean checkFirstSignal(String deviceId,int type);
+
+    Boolean checkSecSignal(String deviceId ,int type);
+
+    Boolean checkThirdSignal(String deviceId, int type);
+
+    Boolean checkForthSignal(String deviceId, int type);
 }

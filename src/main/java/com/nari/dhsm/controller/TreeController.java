@@ -100,4 +100,21 @@ public class TreeController {
         }
     }
 
+    @RequestMapping(value="/getSignalTypeList",method= RequestMethod.POST)
+    @ApiOperation("获取信号类型信息")
+    public JSONObject getSignalTypeList(@RequestParam Map<String,Object> map){
+        log.info("==== 获取信号类型信息 ====");
+        JSONObject jsonObject = new JSONObject();
+        try{
+            List<HashMap<String,Object>> signalTypeList = treeService.getSignalTypeList((String) map.get("deviceId"));
+            jsonObject.put("list",signalTypeList);
+            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
+            return jsonObject;
+        }catch (Exception e){
+            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
+            return jsonObject;
+        }
+    }
 }
