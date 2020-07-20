@@ -136,7 +136,6 @@ public class TreeServiceImpl implements TreeService {
         HashMap<String,Object> firTypeMap = new HashMap<>();
         HashMap<String,Object> secTypeMap = new HashMap<>();
         HashMap<String,Object> thirdTypeMap = new HashMap<>();
-        HashMap<String,Object> forthTypeMap = new HashMap<>();
 
         if(signalMapper.checkFirstSignal(deviceId,0)){
                 firTypeMap.put("id", UUID.randomUUID().toString());
@@ -184,26 +183,9 @@ public class TreeServiceImpl implements TreeService {
             thirdTypeMap.put("type",2);
             thirdTypeMap.put("deviceId",deviceId);
         }
-        if(signalMapper.checkForthSignal(deviceId,3)){
-            forthTypeMap.put("id", UUID.randomUUID().toString());
-            forthTypeMap.put("name","B02额外报警信号");
-            forthTypeMap.put("icon","fault");
-            forthTypeMap.put("leaf",true);
-            forthTypeMap.put("type",3);
-            forthTypeMap.put("deviceId",deviceId);
-        }else{
-            forthTypeMap.put("id", UUID.randomUUID().toString());
-            forthTypeMap.put("name","B02额外报警信号");
-            forthTypeMap.put("icon","normal");
-            forthTypeMap.put("leaf",true);
-            forthTypeMap.put("type",3);
-            forthTypeMap.put("deviceId",deviceId);
-        }
-
         signalTypeList.add(firTypeMap);
         signalTypeList.add(secTypeMap);
         signalTypeList.add(thirdTypeMap);
-        signalTypeList.add(forthTypeMap);
 
         return signalTypeList;
     }

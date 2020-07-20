@@ -12,4 +12,6 @@ public interface SignalService {
 
     List<HashMap<String,Object>> getBlockSignalList(String deviceId,Integer type);
 
+    List<HashMap<String,Object>> getOtherSignalList(String deviceId,Integer type);
+
 }

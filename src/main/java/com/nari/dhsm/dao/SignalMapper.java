@@ -16,6 +16,9 @@ public interface SignalMapper {
 
     List<HashMap<String,Object>> getBlockSignalList(String deviceId,Integer type);
 
+    List<HashMap<String,Object>> getOtherSignalList(String deviceId,Integer type);
+
+
     Boolean checkFirstSignal(String deviceId,int type);
 
     Boolean checkSecSignal(String deviceId ,int type);

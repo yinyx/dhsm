@@ -33,18 +33,36 @@ public class SignalServiceImpl implements SignalService {
                 case 1:
                     temp.put("typeName","告警信号");
                     break;
+                default:
+            }
+            if(((int) temp.get("valid") == 0) ){
+                temp.put("value",null);
+            }
+            rtnList.add(temp);
+        }
+        return rtnList;
+    }
+    @Override
+    public List<HashMap<String, Object>> getOtherSignalList(String deviceId,Integer type){
+        List<HashMap<String,Object>> blockList = signalMapper.getOtherSignalList(deviceId,type);
+        List<HashMap<String,Object>> rtnList = new ArrayList<>();
+        for (HashMap<String,Object> temp: blockList) {
+            switch(type){
                 case 2:
                     temp.put("typeName","智能板卡报警闭锁信号");
                     break;
-                case 3:
-                    temp.put("typeName","B02额外报警信号");
-                    break;
                 default:
             }
-            if(((int) temp.get("valid") == 1) && ((float)temp.get("value") == 0.0)){
-                temp.put("value",false);
-            }else if(((int) temp.get("valid") == 1) && ((float)temp.get("value") == 1.0)){
-                temp.put("value",true);
+            if(((int) temp.get("valid") == 0) ){
+                temp.put("value",null);
+            }
+            if(("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (float)temp.get("value"))){
+                temp.put("bjj",0);
+                temp.put("bsj",1);
+            }
+            if(!("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (float)temp.get("value"))){
+                temp.put("bjj",0);
+                temp.put("bsj",0);
             }
             rtnList.add(temp);
         }

@@ -48,6 +48,22 @@ public class SignalController {
         }
     }
 
-
+    @RequestMapping(value="/getBoardSignal",method= RequestMethod.POST)
+    @ApiOperation("获取其他智能板卡报警闭锁信号")
+    public JSONObject getBoardSignal(@RequestParam Map<String,Object> map){
+        log.info("==== 获取其他智能板卡报警闭锁信号 ====");
+        JSONObject jsonObject = new JSONObject();
+        try {
+            List<HashMap<String, Object>> otherSignalList = signalService.getOtherSignalList((String) map.get("deviceId"),Integer.valueOf((String) map.get("type")));
+            jsonObject.put("list", otherSignalList);
+            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
+            return jsonObject;
+        }catch (Exception e){
+            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
+            return jsonObject;
+        }
+    }
 
 }
