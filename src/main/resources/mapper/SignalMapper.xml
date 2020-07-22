@@ -66,8 +66,8 @@
       left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
       where
         device = #{deviceId,jdbcType=VARCHAR} and
-          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
-          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          (dev_combine_signal_template.type = #{type,jdbcType=INTEGER} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=INTEGER})
           and dev_online_signal.alarm_flag = 1
     </select>
     <select id="checkSecSignal" resultType="java.lang.Boolean">
@@ -76,8 +76,8 @@
       left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
       where
         device = #{deviceId,jdbcType=VARCHAR} and
-          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
-          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          (dev_combine_signal_template.type = #{type,jdbcType=INTEGER} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=INTEGER})
           and dev_online_signal.alarm_flag = 1
     </select>
     <select id="checkThirdSignal" resultType="java.lang.Boolean">
@@ -86,8 +86,8 @@
       left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
       where
         device = #{deviceId,jdbcType=VARCHAR} and
-          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
-          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          (dev_combine_signal_template.type = #{type,jdbcType=INTEGER} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=INTEGER})
           and dev_online_signal.alarm_flag = 1
     </select>
     <select id="checkForthSignal" resultType="java.lang.Boolean">
@@ -96,8 +96,8 @@
       left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id
       where
         device = #{deviceId,jdbcType=VARCHAR} and
-          (dev_combine_signal_template.type = #{type,jdbcType=VARCHAR} or
-          dev_monitor_signal_template.type=  #{type,jdbcType=VARCHAR})
+          (dev_combine_signal_template.type = #{type,jdbcType=INTEGER} or
+          dev_monitor_signal_template.type=  #{type,jdbcType=INTEGER})
           and dev_online_signal.alarm_flag = 1
     </select>
 </mapper>

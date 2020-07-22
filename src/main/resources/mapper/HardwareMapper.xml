@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nari.dhsm.dao.HardwareMapper">
+    <resultMap id="TemplateResultMap" type="com.nari.dhsm.entity.PluginTemplate">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="pluginType" column="plugin_type" jdbcType="VARCHAR"/>
+        <result property="monitorItem" column="monitor_item" jdbcType="VARCHAR"/>
+        <result property="valueType" column="value_type" jdbcType="INTEGER"/>
+        <result property="valueUnit" column="value_unit" jdbcType="VARCHAR"/>
+        <result property="maxValue" column="max_value" jdbcType="VARCHAR"/>
+        <result property="minValue" column="min_value" jdbcType="VARCHAR"/>
+        <result property="typicalValue" column="typical_value" jdbcType="VARCHAR"/>
+        <result property="alarmThreshold" column="alarm_threshold" jdbcType="FLOAT"/>
+        <result property="monitorMode" column="monitor_mode" jdbcType="INTEGER"/>
+        <result property="belongFlag" column="belong_flag" jdbcType="INTEGER"/>
+        <result property="defaultValue" column="default_value" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <resultMap id="PwrOnlineResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="deviceId" column="device" jdbcType="VARCHAR"/>
+        <result property="boardId" column="board_id" jdbcType="INTEGER"/>
+        <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
+        <result property="valueType" column="value_type" jdbcType="INTEGER"/>
+        <result property="value" column="value" jdbcType="FLOAT"/>
+        <result property="signalId" column="signal_id" jdbcType="VARCHAR"/>
+        <result property="src" column="src" jdbcType="INTEGER"/>
+        <result property="valid" column="valid" jdbcType="INTEGER"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="model" column="model" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="slot" column="slot" jdbcType="INTEGER"/>
+        <result property="pluginType" column="plugin_type" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="getPluginTemplate" resultMap="TemplateResultMap">
+        SELECT
+          id
+          ,plugin_type
+          ,monitor_item
+          ,value_type
+          ,value_unit
+          ,max_value
+          ,min_value
+          ,typical_value
+          ,alarm_threshold
+          ,monitor_mode
+          ,belong_flag
+          ,default_value
+          from dev_hardware_template
+          WHERE
+            plugin_type = #{pluginType ,jdbcType=VARCHAR}
+          ORDER BY id
+    </select>
+
+    <select id="getPwrOnlineList" resultMap="PwrOnlineResultMap">
+        SELECT
+          d1.id
+          ,d1.device
+          ,d1.board_id
+          ,d1.alarm_flag
+          ,d1.value
+          ,d1.signal_id
+          ,d1.src
+          ,d1.valid
+          ,i1.model
+          ,i1.name
+          ,b1.slot
+          ,b1.plugin_type
+          ,d2.value_type
+          from dev_online_signal d1
+          left join info_protect_device i1 on d1.device = i1.id
+          left join dev_hardware_template d2 on d1.signal_id = d2.id
+          left join info_board_config b1 on d1.board_id = b1.id
+          WHERE
+            d1.device = #{deviceId,jdbcType=VARCHAR} AND
+            b1.slot = #{slot,jdbcType=INTEGER} AND
+            d2.plugin_type = 'PWR'
+            ORDER BY d1.signal_id
+    </select>
+
+</mapper>
