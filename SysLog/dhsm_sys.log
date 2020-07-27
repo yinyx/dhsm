@@ -1,210 +1,246 @@
-2020-06-19 11:07:32 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 23648 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:07:32 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:07:32 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:08:30 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 15168 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:08:30 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:08:30 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:09:56 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 3520 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:09:56 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:09:56 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:10:01 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 5.982 seconds (JVM running for 7.599)
-2020-06-19 11:10:23 [http-nio-8090-exec-2] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.preHandle****
-2020-06-19 11:10:23 [http-nio-8090-exec-2] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.postHandle****
-2020-06-19 11:10:23 [http-nio-8090-exec-2] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.postHandle****null
-2020-06-19 11:10:23 [http-nio-8090-exec-2] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.afterCompletion****拦截结束
-2020-06-19 11:11:26 [http-nio-8090-exec-3] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.preHandle****
-2020-06-19 11:11:26 [http-nio-8090-exec-3] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.postHandle****
-2020-06-19 11:11:26 [http-nio-8090-exec-3] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.postHandle****null
-2020-06-19 11:11:26 [http-nio-8090-exec-3] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.afterCompletion****拦截结束
-2020-06-19 11:12:14 [http-nio-8090-exec-6] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.preHandle****
-2020-06-19 11:12:14 [http-nio-8090-exec-6] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.postHandle****
-2020-06-19 11:12:14 [http-nio-8090-exec-6] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.postHandle****null
-2020-06-19 11:12:14 [http-nio-8090-exec-6] INFO  com.nari.dhsm.Interceptor.LoginInterceptor -[****LoginInterceptor.afterCompletion****拦截结束
-2020-06-19 11:12:31 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 23780 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:12:31 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:12:31 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:12:33 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 3.322 seconds (JVM running for 5.075)
-2020-06-19 11:21:22 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 22580 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:21:22 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:21:22 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:21:25 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 3.517 seconds (JVM running for 5.105)
-2020-06-19 11:23:03 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 22580 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:23:03 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:23:03 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:23:04 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.043 seconds (JVM running for 104.293)
-2020-06-19 11:23:16 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:23:16 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:23:16 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:23:19 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 3.731 seconds (JVM running for 5.344)
-2020-06-19 11:23:23 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count (*) FROM info_user WHERE phone = ?, password = ? 
-2020-06-19 11:23:23 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 11:23:51 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count (*) FROM info_user WHERE phone = ?, password = ? 
-2020-06-19 11:23:51 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 11:23:56 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:23:56 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:23:56 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:23:57 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.847 seconds (JVM running for 42.574)
-2020-06-19 11:24:01 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count (*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 11:24:01 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 11:27:15 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 11:27:15 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 11:27:15 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 11:27:16 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.614 seconds (JVM running for 241.846)
-2020-06-19 13:36:21 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count (*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:36:21 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 13:37:17 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count (*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:37:18 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 13:37:20 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 13:37:20 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 13:37:20 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 13:37:21 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.141 seconds (JVM running for 8046.61)
-2020-06-19 13:37:23 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:37:23 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 13:37:23 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 13:37:35 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:37:35 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198243(String), 123456(String)
-2020-06-19 13:37:35 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 13:37:41 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:37:41 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198(String), 123456(String)
-2020-06-19 13:37:41 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 13:37:41 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:37:41 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198(String), 123456(String)
-2020-06-19 13:37:41 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 13:38:03 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 13:38:03 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198(String), 123456(String)
-2020-06-19 13:38:03 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 13:38:05 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 13:38:05 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 13:38:05 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 13:38:06 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.685 seconds (JVM running for 8091.755)
-2020-06-19 14:24:20 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:24:20 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:24:20 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:24:22 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.428 seconds (JVM running for 10867.552)
-2020-06-19 14:32:26 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:32:26 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:32:26 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:32:27 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.157 seconds (JVM running for 11352.84)
-2020-06-19 14:33:11 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:33:11 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:33:11 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:33:11 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.914 seconds (JVM running for 11397.383)
-2020-06-19 14:33:28 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:33:28 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:33:28 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:33:29 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.979 seconds (JVM running for 11415.105)
-2020-06-19 14:34:17 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:34:17 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:34:17 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:34:18 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.874 seconds (JVM running for 11463.534)
-2020-06-19 14:35:14 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:35:14 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:35:14 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:35:15 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.856 seconds (JVM running for 11520.708)
-2020-06-19 14:37:09 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:37:09 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:37:09 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:37:10 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.784 seconds (JVM running for 11635.799)
-2020-06-19 14:37:49 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:37:49 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:37:49 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:37:50 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.106 seconds (JVM running for 11676.096)
-2020-06-19 14:41:40 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:41:40 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:41:40 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:41:41 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.957 seconds (JVM running for 11907.341)
-2020-06-19 14:42:35 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:42:35 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:42:35 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:42:36 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.849 seconds (JVM running for 11961.594)
-2020-06-19 14:42:38 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 14:42:38 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198214(String), 123456(String)
-2020-06-19 14:42:38 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 14:42:40 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 14:42:40 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198214(String), 123456(String)
-2020-06-19 14:42:40 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 14:42:48 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 14:42:48 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 14:42:48 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 14:43:38 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:43:38 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:43:38 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:43:39 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.059 seconds (JVM running for 12024.521)
-2020-06-19 14:44:34 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:44:34 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:44:34 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:44:35 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.709 seconds (JVM running for 12080.784)
-2020-06-19 14:48:19 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 14:48:19 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 123456(String)
-2020-06-19 14:48:19 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 14:48:21 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:48:21 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:48:21 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:48:22 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.043 seconds (JVM running for 12308.304)
-2020-06-19 14:48:23 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
-2020-06-19 14:48:23 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 13905198240(String), 1234562(String)
-2020-06-19 14:48:23 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
-2020-06-19 14:53:04 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:53:04 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:53:04 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:53:05 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.016 seconds (JVM running for 12590.955)
-2020-06-19 14:54:46 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:54:46 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:54:46 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:54:47 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.897 seconds (JVM running for 12692.68)
-2020-06-19 14:57:21 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:57:21 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:57:21 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:57:22 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.997 seconds (JVM running for 12847.552)
-2020-06-19 14:58:00 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:58:00 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:58:00 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:58:01 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.685 seconds (JVM running for 12886.618)
-2020-06-19 14:59:06 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 18084 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:59:06 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:59:06 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:59:08 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.595 seconds (JVM running for 12953.593)
-2020-06-19 14:59:42 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 16256 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 14:59:42 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 14:59:42 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 14:59:46 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 4.97 seconds (JVM running for 7.022)
-2020-06-19 15:00:17 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 16256 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:00:17 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:00:17 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:00:18 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 0.745 seconds (JVM running for 39.126)
-2020-06-19 15:25:47 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:25:47 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:25:47 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:25:53 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 6.794 seconds (JVM running for 9.069)
-2020-06-19 15:29:19 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:29:19 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:29:19 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:29:20 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.904 seconds (JVM running for 216.834)
-2020-06-19 15:31:56 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:31:56 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:31:56 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:31:57 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.35 seconds (JVM running for 373.735)
-2020-06-19 15:32:28 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:32:28 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:32:28 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:32:29 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.538 seconds (JVM running for 405.547)
-2020-06-19 15:35:05 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:35:05 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:35:05 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:35:06 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.578 seconds (JVM running for 562.79)
-2020-06-19 15:35:44 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:35:44 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:35:44 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:35:46 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.748 seconds (JVM running for 601.922)
-2020-06-19 15:36:12 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:36:12 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:36:12 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:36:13 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.628 seconds (JVM running for 629.769)
-2020-06-19 15:36:36 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:36:36 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:36:36 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:36:37 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.612 seconds (JVM running for 653.565)
-2020-06-19 15:44:48 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 20624 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
-2020-06-19 15:44:48 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-06-19 15:44:48 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
-2020-06-19 15:44:50 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.751 seconds (JVM running for 1146.418)
+2020-07-27 09:06:14 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 13160 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
+2020-07-27 09:06:14 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-27 09:06:14 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
+2020-07-27 09:06:25 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 12.585 seconds (JVM running for 17.082)
+2020-07-27 09:09:44 [http-nio-8090-exec-1] INFO  com.nari.dhsm.controller.UserController -==== 进行登录校验 ====
+2020-07-27 09:09:45 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==>  Preparing: SELECT count(*) FROM info_user WHERE phone = ? AND password = ? 
+2020-07-27 09:09:45 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -==> Parameters: 19999999999(String), 123456(String)
+2020-07-27 09:09:45 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.UserMapper.loginVoCheck -<==      Total: 1
+2020-07-27 09:09:49 [http-nio-8090-exec-3] INFO  com.nari.dhsm.controller.TreeController -==== 获取设备列表信息 ====
+2020-07-27 09:09:49 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==>  Preparing: select id, name, model, online, ip_address, alarm_flag from info_protect_device WHERE online = 1 
+2020-07-27 09:09:49 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==> Parameters: 
+2020-07-27 09:09:50 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -<==      Total: 2
+2020-07-27 09:09:51 [http-nio-8090-exec-6] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:09:51 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:09:51 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:09:51 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:09:51 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:09:51 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:09:52 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:09:52 [http-nio-8090-exec-5] INFO  com.nari.dhsm.controller.TreeController -==== 获取信号类型信息 ====
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -==> Parameters: 12345678901234567890123456789126(String), 0(Integer), 0(Integer)
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -<==      Total: 1
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -==> Parameters: 12345678901234567890123456789126(String), 1(Integer), 1(Integer)
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -<==      Total: 1
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -==> Parameters: 12345678901234567890123456789126(String), 2(Integer), 2(Integer)
+2020-07-27 09:09:52 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -<==      Total: 1
+2020-07-27 09:09:54 [http-nio-8090-exec-4] INFO  com.nari.dhsm.controller.TreeController -==== 获取插件列表信息 ====
+2020-07-27 09:09:54 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==>  Preparing: select id, device, plugin_type, slot, alarm_flag FROM info_plugin_config WHERE 1 = 1 AND device = ? 
+2020-07-27 09:09:54 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:09:54 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -<==      Total: 8
+2020-07-27 09:09:54 [http-nio-8090-exec-7] INFO  com.nari.dhsm.controller.SignalController -==== 获取软件信号 ====
+2020-07-27 09:09:54 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==>  Preparing: select DISTINCT s1.id, s1.device, s1.alarm_flag, value, signal_id, src, valid, COALESCE(s2.description,s3.description) as description, d1.model, d1.name FROM dev_online_signal s1 LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id LEFT JOIN info_protect_device d1 on s1.device = d1.id WHERE device = ? AND (s2.type = ? or s3.type=?) AND src != 0 
+2020-07-27 09:09:54 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==> Parameters: 12345678901234567890123456789126(String), 0(Integer), 0(Integer)
+2020-07-27 09:09:55 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -<==      Total: 1
+2020-07-27 09:10:50 [http-nio-8090-exec-8] INFO  com.nari.dhsm.controller.SignalController -==== 获取软件信号 ====
+2020-07-27 09:10:50 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==>  Preparing: select DISTINCT s1.id, s1.device, s1.alarm_flag, value, signal_id, src, valid, COALESCE(s2.description,s3.description) as description, d1.model, d1.name FROM dev_online_signal s1 LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id LEFT JOIN info_protect_device d1 on s1.device = d1.id WHERE device = ? AND (s2.type = ? or s3.type=?) AND src != 0 
+2020-07-27 09:10:50 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==> Parameters: 12345678901234567890123456789126(String), 0(Integer), 0(Integer)
+2020-07-27 09:10:50 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -<==      Total: 1
+2020-07-27 09:10:51 [http-nio-8090-exec-9] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:10:51 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:10:51 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:10:51 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:10:51 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:10:51 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:10:51 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:10:52 [http-nio-8090-exec-10] INFO  com.nari.dhsm.controller.TreeController -==== 获取信号类型信息 ====
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -==> Parameters: 12345678901234567890123456789125(String), 0(Integer), 0(Integer)
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -<==      Total: 1
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -==> Parameters: 12345678901234567890123456789125(String), 1(Integer), 1(Integer)
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -<==      Total: 1
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -==> Parameters: 12345678901234567890123456789125(String), 2(Integer), 2(Integer)
+2020-07-27 09:10:52 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -<==      Total: 1
+2020-07-27 09:10:53 [http-nio-8090-exec-1] INFO  com.nari.dhsm.controller.SignalController -==== 获取软件信号 ====
+2020-07-27 09:10:53 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==>  Preparing: select DISTINCT s1.id, s1.device, s1.alarm_flag, value, signal_id, src, valid, COALESCE(s2.description,s3.description) as description, d1.model, d1.name FROM dev_online_signal s1 LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id LEFT JOIN info_protect_device d1 on s1.device = d1.id WHERE device = ? AND (s2.type = ? or s3.type=?) AND src != 0 
+2020-07-27 09:10:53 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==> Parameters: 12345678901234567890123456789125(String), 0(Integer), 0(Integer)
+2020-07-27 09:10:53 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -<==      Total: 7
+2020-07-27 09:11:56 [http-nio-8090-exec-2] INFO  com.nari.dhsm.controller.TreeController -==== 获取插件列表信息 ====
+2020-07-27 09:11:56 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==>  Preparing: select id, device, plugin_type, slot, alarm_flag FROM info_plugin_config WHERE 1 = 1 AND device = ? 
+2020-07-27 09:11:56 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:11:56 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -<==      Total: 0
+2020-07-27 09:12:01 [http-nio-8090-exec-3] INFO  com.nari.dhsm.controller.HardwareController -==== 获取ADC实时量 ====
+2020-07-27 09:12:01 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getAdcOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'ADC' ORDER BY d1.signal_id 
+2020-07-27 09:12:01 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getAdcOnlineList -==> Parameters: 12345678901234567890123456789126(String), 3(Integer)
+2020-07-27 09:12:01 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getAdcOnlineList -<==      Total: 2
+2020-07-27 09:12:01 [http-nio-8090-exec-6] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:12:01 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:12:01 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: ADC(String)
+2020-07-27 09:12:01 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 2
+2020-07-27 09:12:03 [http-nio-8090-exec-5] INFO  com.nari.dhsm.controller.HardwareController -==== 获取PWR实时量 ====
+2020-07-27 09:12:03 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'PWR' ORDER BY d1.signal_id 
+2020-07-27 09:12:03 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==> Parameters: 12345678901234567890123456789126(String), 2(Integer)
+2020-07-27 09:12:03 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -<==      Total: 5
+2020-07-27 09:12:03 [http-nio-8090-exec-4] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:12:03 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:12:03 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:12:03 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:12:44 [http-nio-8090-exec-7] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:12:44 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:12:44 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:12:44 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:12:57 [http-nio-8090-exec-8] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:12:57 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:12:57 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:12:57 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:13:13 [http-nio-8090-exec-9] INFO  com.nari.dhsm.controller.TreeController -==== 获取设备列表信息 ====
+2020-07-27 09:13:13 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==>  Preparing: select id, name, model, online, ip_address, alarm_flag from info_protect_device WHERE online = 1 
+2020-07-27 09:13:13 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==> Parameters: 
+2020-07-27 09:13:13 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -<==      Total: 2
+2020-07-27 09:13:14 [http-nio-8090-exec-10] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:13:14 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:13:14 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:13:14 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:13:14 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:13:14 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:13:14 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:13:15 [http-nio-8090-exec-1] INFO  com.nari.dhsm.controller.TreeController -==== 获取信号类型信息 ====
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -==> Parameters: 12345678901234567890123456789125(String), 0(Integer), 0(Integer)
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkFirstSignal -<==      Total: 1
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -==> Parameters: 12345678901234567890123456789125(String), 1(Integer), 1(Integer)
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkSecSignal -<==      Total: 1
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -==>  Preparing: SELECT count(*) FROM `dev_online_signal` left join dev_monitor_signal_template on dev_online_signal.signal_id = dev_monitor_signal_template.id left join dev_combine_signal_template on dev_combine_signal_template.id = dev_online_signal.signal_id where device = ? and (dev_combine_signal_template.type = ? or dev_monitor_signal_template.type= ?) and dev_online_signal.alarm_flag = 1 
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -==> Parameters: 12345678901234567890123456789125(String), 2(Integer), 2(Integer)
+2020-07-27 09:13:15 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.SignalMapper.checkThirdSignal -<==      Total: 1
+2020-07-27 09:13:16 [http-nio-8090-exec-2] INFO  com.nari.dhsm.controller.TreeController -==== 获取插件列表信息 ====
+2020-07-27 09:13:16 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==>  Preparing: select id, device, plugin_type, slot, alarm_flag FROM info_plugin_config WHERE 1 = 1 AND device = ? 
+2020-07-27 09:13:16 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:13:16 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -<==      Total: 0
+2020-07-27 09:13:17 [http-nio-8090-exec-3] INFO  com.nari.dhsm.controller.SignalController -==== 获取软件信号 ====
+2020-07-27 09:13:17 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==>  Preparing: select DISTINCT s1.id, s1.device, s1.alarm_flag, value, signal_id, src, valid, COALESCE(s2.description,s3.description) as description, d1.model, d1.name FROM dev_online_signal s1 LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id LEFT JOIN info_protect_device d1 on s1.device = d1.id WHERE device = ? AND (s2.type = ? or s3.type=?) AND src != 0 
+2020-07-27 09:13:17 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -==> Parameters: 12345678901234567890123456789125(String), 2(Integer), 2(Integer)
+2020-07-27 09:13:17 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.SignalMapper.getBlockSignalList -<==      Total: 1
+2020-07-27 09:13:18 [http-nio-8090-exec-6] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:13:18 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:13:18 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:13:18 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:13:18 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:13:18 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:13:18 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:13:19 [http-nio-8090-exec-5] INFO  com.nari.dhsm.controller.TreeController -==== 获取插件列表信息 ====
+2020-07-27 09:13:19 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==>  Preparing: select id, device, plugin_type, slot, alarm_flag FROM info_plugin_config WHERE 1 = 1 AND device = ? 
+2020-07-27 09:13:19 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:13:19 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -<==      Total: 8
+2020-07-27 09:13:21 [http-nio-8090-exec-4] INFO  com.nari.dhsm.controller.HardwareController -==== 获取BI实时量 ====
+2020-07-27 09:13:21 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getBiOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = '智能BI' ORDER BY d1.signal_id 
+2020-07-27 09:13:21 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getBiOnlineList -==> Parameters: 12345678901234567890123456789126(String), 6(Integer)
+2020-07-27 09:13:21 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getBiOnlineList -<==      Total: 2
+2020-07-27 09:13:21 [http-nio-8090-exec-7] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:13:21 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:13:21 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: 智能BI(String)
+2020-07-27 09:13:21 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 2
+2020-07-27 09:13:21 [http-nio-8090-exec-8] INFO  com.nari.dhsm.controller.HardwareController -==== 获取PWR实时量 ====
+2020-07-27 09:13:21 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'PWR' ORDER BY d1.signal_id 
+2020-07-27 09:13:21 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==> Parameters: 12345678901234567890123456789126(String), 2(Integer)
+2020-07-27 09:13:21 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -<==      Total: 5
+2020-07-27 09:13:22 [http-nio-8090-exec-9] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:13:22 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:13:22 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:13:22 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:15:03 [http-nio-8090-exec-10] INFO  com.nari.dhsm.controller.TreeController -==== 获取设备列表信息 ====
+2020-07-27 09:15:03 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==>  Preparing: select id, name, model, online, ip_address, alarm_flag from info_protect_device WHERE online = 1 
+2020-07-27 09:15:03 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==> Parameters: 
+2020-07-27 09:15:03 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -<==      Total: 2
+2020-07-27 09:15:05 [http-nio-8090-exec-1] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:15:05 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:15:05 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:15:05 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:15:05 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:15:05 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:15:05 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:15:06 [http-nio-8090-exec-2] INFO  com.nari.dhsm.controller.TreeController -==== 获取插件列表信息 ====
+2020-07-27 09:15:06 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==>  Preparing: select id, device, plugin_type, slot, alarm_flag FROM info_plugin_config WHERE 1 = 1 AND device = ? 
+2020-07-27 09:15:06 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:15:06 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -<==      Total: 8
+2020-07-27 09:15:07 [http-nio-8090-exec-3] INFO  com.nari.dhsm.controller.HardwareController -==== 获取PWR实时量 ====
+2020-07-27 09:15:07 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'PWR' ORDER BY d1.signal_id 
+2020-07-27 09:15:07 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==> Parameters: 12345678901234567890123456789126(String), 2(Integer)
+2020-07-27 09:15:07 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -<==      Total: 5
+2020-07-27 09:15:07 [http-nio-8090-exec-6] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:15:07 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:15:07 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:15:07 [http-nio-8090-exec-6] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:19:11 [http-nio-8090-exec-4] INFO  com.nari.dhsm.controller.TreeController -==== 获取设备列表信息 ====
+2020-07-27 09:19:11 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==>  Preparing: select id, name, model, online, ip_address, alarm_flag from info_protect_device WHERE online = 1 
+2020-07-27 09:19:11 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -==> Parameters: 
+2020-07-27 09:19:11 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.TreeDataMapper.getDeviceMap -<==      Total: 2
+2020-07-27 09:19:13 [http-nio-8090-exec-7] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:19:13 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:19:13 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:19:13 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:19:13 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:19:13 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789125(String)
+2020-07-27 09:19:13 [http-nio-8090-exec-7] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:19:15 [http-nio-8090-exec-8] INFO  com.nari.dhsm.controller.TreeController -==== 获取模块列表信息 ====
+2020-07-27 09:19:15 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==>  Preparing: select count(*) from info_plugin_config WHERE 1=1 AND device = ? AND alarm_flag = 1 
+2020-07-27 09:19:15 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:19:15 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHmoduleStatus -<==      Total: 1
+2020-07-27 09:19:15 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==>  Preparing: select count(*) from dev_online_signal WHERE 1=1 AND device = ? AND alarm_flag = 1 AND src != 0 
+2020-07-27 09:19:15 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:19:15 [http-nio-8090-exec-8] DEBUG com.nari.dhsm.dao.TreeDataMapper.getSmoduleStatus -<==      Total: 1
+2020-07-27 09:19:16 [http-nio-8090-exec-9] INFO  com.nari.dhsm.controller.TreeController -==== 获取插件列表信息 ====
+2020-07-27 09:19:16 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==>  Preparing: select id, device, plugin_type, slot, alarm_flag FROM info_plugin_config WHERE 1 = 1 AND device = ? 
+2020-07-27 09:19:16 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -==> Parameters: 12345678901234567890123456789126(String)
+2020-07-27 09:19:16 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.TreeDataMapper.getHardwarePluginMap -<==      Total: 8
+2020-07-27 09:19:17 [http-nio-8090-exec-10] INFO  com.nari.dhsm.controller.HardwareController -==== 获取PWR实时量 ====
+2020-07-27 09:19:17 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'PWR' ORDER BY d1.signal_id 
+2020-07-27 09:19:17 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -==> Parameters: 12345678901234567890123456789126(String), 2(Integer)
+2020-07-27 09:19:17 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.HardwareMapper.getPwrOnlineList -<==      Total: 5
+2020-07-27 09:19:17 [http-nio-8090-exec-1] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:19:17 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:19:17 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:19:17 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:19:24 [http-nio-8090-exec-2] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:19:24 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:19:24 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:19:24 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:22:33 [http-nio-8090-exec-3] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:22:33 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:22:33 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: PWR(String)
+2020-07-27 09:22:33 [http-nio-8090-exec-3] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 8
+2020-07-27 09:22:38 [http-nio-8090-exec-5] INFO  com.nari.dhsm.controller.HardwareController -==== 按类型获取插件模板量 ====
+2020-07-27 09:22:38 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==>  Preparing: SELECT id ,plugin_type ,monitor_item ,value_type ,value_unit ,max_value ,min_value ,typical_value ,alarm_threshold ,monitor_mode ,belong_flag ,default_value from dev_hardware_template WHERE plugin_type = ? ORDER BY id 
+2020-07-27 09:22:38 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -==> Parameters: 机箱(String)
+2020-07-27 09:22:38 [http-nio-8090-exec-5] DEBUG com.nari.dhsm.dao.HardwareMapper.getPluginTemplate -<==      Total: 2
+2020-07-27 09:22:53 [http-nio-8090-exec-4] INFO  com.nari.dhsm.controller.HardwareController -==== 获取SV/GOOSE实时量 ====
+2020-07-27 09:22:53 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getSvOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'SV/GOOSE' ORDER BY d1.signal_id 
+2020-07-27 09:22:53 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getSvOnlineList -==> Parameters: 12345678901234567890123456789126(String), 1(Integer)
+2020-07-27 09:22:53 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getSvOnlineList -<==      Total: 0
+2020-07-27 09:24:46 [http-nio-8090-exec-9] INFO  com.nari.dhsm.controller.HardwareController -==== 获取SV/GOOSE实时量 ====
+2020-07-27 09:24:46 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.HardwareMapper.getSvOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'SV/GOOSE' ORDER BY d1.signal_id 
+2020-07-27 09:24:46 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.HardwareMapper.getSvOnlineList -==> Parameters: 12345678901234567890123456789126(String), 4(Integer)
+2020-07-27 09:24:46 [http-nio-8090-exec-9] DEBUG com.nari.dhsm.dao.HardwareMapper.getSvOnlineList -<==      Total: 0
+2020-07-27 09:24:53 [http-nio-8090-exec-10] INFO  com.nari.dhsm.controller.HardwareController -==== 获取SV/GOOSE实时量 ====
+2020-07-27 09:24:53 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'CPU' ORDER BY d1.signal_id 
+2020-07-27 09:24:53 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==> Parameters: 12345678901234567890123456789126(String), 4(Integer)
+2020-07-27 09:24:53 [http-nio-8090-exec-10] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -<==      Total: 0
+2020-07-27 09:25:00 [http-nio-8090-exec-1] INFO  com.nari.dhsm.controller.HardwareController -==== 获取SV/GOOSE实时量 ====
+2020-07-27 09:25:00 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'CPU' ORDER BY d1.signal_id 
+2020-07-27 09:25:00 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==> Parameters: 12345678901234567890123456789126(String), 1(Integer)
+2020-07-27 09:25:00 [http-nio-8090-exec-1] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -<==      Total: 1
+2020-07-27 09:25:46 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 13160 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
+2020-07-27 09:25:46 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-27 09:25:46 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
+2020-07-27 09:25:48 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 2.031 seconds (JVM running for 1180.334)
+2020-07-27 09:26:12 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 13160 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
+2020-07-27 09:26:12 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-27 09:26:12 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
+2020-07-27 09:26:14 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 2.394 seconds (JVM running for 1206.384)
+2020-07-27 09:26:15 [http-nio-8090-exec-4] INFO  com.nari.dhsm.controller.HardwareController -==== 获取SV/GOOSE实时量 ====
+2020-07-27 09:26:15 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type ,d2. from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'CPU' ORDER BY d1.signal_id 
+2020-07-27 09:26:15 [http-nio-8090-exec-4] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==> Parameters: 12345678901234567890123456789126(String), 1(Integer)
+2020-07-27 09:26:17 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Starting DhsmApplication on LAPTOP-26S97N14 with PID 13160 (D:\workspace\dhsm\target\classes started by yinyx in D:\workspace\dhsm)
+2020-07-27 09:26:17 [restartedMain] DEBUG com.nari.dhsm.DhsmApplication -Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-27 09:26:17 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -No active profile set, falling back to default profiles: default
+2020-07-27 09:26:19 [restartedMain] INFO  com.nari.dhsm.DhsmApplication -Started DhsmApplication in 1.769 seconds (JVM running for 1211.362)
+2020-07-27 09:26:19 [http-nio-8090-exec-2] INFO  com.nari.dhsm.controller.HardwareController -==== 获取SV/GOOSE实时量 ====
+2020-07-27 09:26:19 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==>  Preparing: SELECT d1.id ,d1.device ,d1.board_id ,d1.alarm_flag ,d1.value ,d1.signal_id ,d1.src ,d1.valid ,i1.model ,i1.name ,b1.slot ,b1.plugin_type ,d2.value_type ,d2.monitor_item from dev_online_signal d1 left join info_protect_device i1 on d1.device = i1.id left join dev_hardware_template d2 on d1.signal_id = d2.id left join info_plugin_config b1 on d1.board_id = b1.id WHERE d1.device = ? AND b1.slot = ? AND d2.plugin_type = 'CPU' ORDER BY d1.signal_id 
+2020-07-27 09:26:19 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -==> Parameters: 12345678901234567890123456789126(String), 1(Integer)
+2020-07-27 09:26:19 [http-nio-8090-exec-2] DEBUG com.nari.dhsm.dao.HardwareMapper.getCpuOnlineList -<==      Total: 1
