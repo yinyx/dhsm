@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nari.dhsm.dao.StatisticMapper">
+    <resultMap id="StatisticResultMap" type="java.util.HashMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="number" column="number" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 根据变电站Id查询变电站名称 -->
+    <select id="getStationName" resultType="java.lang.String">
+        select name
+        from info_station
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND id = #{stationId,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!-- 根据变电站Id查询所属装置数量-->
+    <select id="getDeviceNum" resultType="java.lang.Integer">
+        select count(1)
+        from info_protect_device
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND station_id = #{stationId,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!-- 根据变电站Id查询所属在线装置数量-->
+    <select id="getOnlineDeviceNum" resultType="java.lang.Integer">
+        select count(1)
+        from info_protect_device
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND station_id = #{stationId,jdbcType=VARCHAR}
+            AND online = 1
+        </if>
+    </select>
+
+    <!-- 根据变电站Id查询所属装置集合-->
+    <select id="getDeviceList" resultType="java.util.HashMap">
+        select id
+        from info_protect_device
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND station_id = #{stationId,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!-- 根据装置Id查询该装置的实时故障数-->
+    <select id="getDeviceFaultNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_online_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+            AND alarm_flag = 1
+            AND valid = 1
+        </if>
+    </select>
+
+    <!-- 根据装置Id查询该装置的实时软件故障数-->
+    <select id="getSoftDeviceFaultNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_online_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+            AND alarm_flag = 1
+            AND ((src = 1) OR (src=2))
+            AND valid = 1
+        </if>
+    </select>
+
+    <!-- 根据装置Id查询该装置的实时硬件故障数-->
+    <select id="getHardDeviceFaultNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_online_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+            AND alarm_flag = 1
+            AND src = 0
+            AND valid = 1
+        </if>
+    </select>
+
+    <!-- 根据变电站Id获取所属装置id列表-->
+    <select id="getDeviceIdList" resultType="java.util.List">
+        select id
+        from info_protect_device
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND station_id = #{stationId,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!-- 根据变电站Id获取所属装置id列表-->
+    <select id="getDeviceNameById" resultType="java.lang.String">
+        select name
+        from info_protect_device
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND id = #{deviceId,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!-- 根据变电站id,模块类型查询该类型当前报警数目-->
+    <select id="getModuleNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_online_signal
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND device in (SELECT id from info_protect_device WHERE station_id = #{stationId})
+        </if>
+        AND alarm_flag = 1
+        AND signal_type = #{moduleIndex}
+        AND valid = 1
+    </select>
+
+    <!-- 根据变电站id,模块类型,时间范围查询该类型历史报警数目-->
+    <select id="getModuleHistoryNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_history_signal
+        WHERE 1=1
+        <if test='stationId != null'>
+            AND device in (SELECT id from info_protect_device WHERE station_id = #{stationId})
+        </if>
+        AND alarm_flag = 1
+        AND signal_type = #{moduleIndex}
+        AND create_time between #{start_time} and #{end_time}
+    </select>
+</mapper>

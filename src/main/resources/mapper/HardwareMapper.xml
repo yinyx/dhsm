@@ -70,6 +70,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -96,6 +97,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -122,6 +124,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -148,6 +151,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -174,6 +178,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -200,6 +205,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -226,6 +232,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -252,6 +259,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -278,6 +286,7 @@
           ,b1.slot
           ,b1.plugin_type
           ,d2.value_type
+          ,d2.monitor_item
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
