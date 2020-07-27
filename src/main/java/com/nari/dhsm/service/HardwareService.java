@@ -11,12 +11,25 @@ import java.util.List;
  */
 public interface HardwareService {
 
-    List<PluginTemplate> getPwrTemplateList();
-
-    List<PluginTemplate> getAdcTemplateList();
-
-    List<PluginTemplate> getAiTemplateList();
+    List<PluginTemplate> getPluginTemplateList(String pluginType);
 
 
     List<HashMap<String,Object>> getPwrOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getAdcOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getAiOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getBiOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getBoOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getLcdOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getSvOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getCpuOnlineList(String deviceId,int slot);
+
+    List<HashMap<String,Object>> getBoxOnlineList(String deviceId,int slot);
+
 }

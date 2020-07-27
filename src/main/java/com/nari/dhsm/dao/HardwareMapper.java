@@ -18,6 +18,13 @@ public interface HardwareMapper {
     List<PluginTemplate> getPluginTemplate(String pluginType);
 
     List<HashMap<String,Object>> getPwrOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getAdcOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getAiOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getBiOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getBoOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getLcdOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getSvOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getCpuOnlineList(String deviceId,int slot);
+    List<HashMap<String,Object>> getBoxOnlineList(String deviceId,int slot);
 
-    HashMap<String,Object> getPluginValue(String deviceId,String signalId,int slot);
 }
