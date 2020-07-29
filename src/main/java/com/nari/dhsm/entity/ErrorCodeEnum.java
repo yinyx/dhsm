@@ -14,8 +14,9 @@ public enum ErrorCodeEnum {
 
 
     E01_1000("01","登录",001000,"账号长度不符"),
-    E01_1001("01","登录",001001,"登录校验不通过");
+    E01_1001("01","登录",001001,"登录校验不通过"),
 
+    E02_1000("02","历史",002000,"暂无历史数据");
 
     private String functionCode;
     private String functionDesc;
