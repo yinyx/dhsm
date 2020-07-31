@@ -18,7 +18,22 @@
         <if test='deviceId != null'>
             AND device = #{deviceId,jdbcType=VARCHAR}
         </if>
+        <if test='content != null'>
+            AND alarm_description like concat(concat('%',#{content}),'%')
+        </if>
+        <if test='FaultType != null'>
+            AND src = #{FaultType}
+        </if>
+        <if test='status != null'>
+            AND alarm_status = #{status}
+        </if>
+        <if test='startTime != "NaN" and endTime !="NaN"'>
+            AND create_time BETWEEN #{startTime} AND #{endTime}
+        </if>
         AND alarm_flag = 1
+        ORDER BY create_time
+        LIMIT
+        #{startRecord,jdbcType=INTEGER},#{lengthRecord,jdbcType=INTEGER}
     </select>
 
     <!--  根据设备Id获取报警数目 -->

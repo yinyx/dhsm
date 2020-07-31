@@ -18,9 +18,9 @@ public class AlarmServiceImpl implements AlarmService {
     private AlarmMapper alarmMapper;
 
     @Override
-    public List<HashMap<String, Object>> getAlarmList(String deviceId) {
+    public List<HashMap<String, Object>> getAlarmList(Map<String,Object> map) {
         List<HashMap<String,Object>> alarmList = new ArrayList<>();
-        alarmList = alarmMapper.getAlarmMap(deviceId);
+        alarmList = alarmMapper.getAlarmMap(map);
         return alarmList;
     }
 

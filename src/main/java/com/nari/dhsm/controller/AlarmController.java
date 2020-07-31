@@ -36,7 +36,13 @@ public class AlarmController {
         log.info("==== 获取报警列表信息 ====");
         JSONObject jsonObject = new JSONObject();
         try{
-            List<HashMap<String,Object>> alarmList = alarmService.getAlarmList((String) map.get("deviceId"));
+            String start = (String)map.get("startRecord");
+            int startRecord = Integer.parseInt(start);
+            map.put("startRecord", startRecord);
+            String length = (String)map.get("lengthRecord");
+            int lengthRecord = Integer.parseInt(length);
+            map.put("lengthRecord", lengthRecord);
+            List<HashMap<String,Object>> alarmList = alarmService.getAlarmList(map);
             int alarmNum = alarmService.getAlarmNum((String) map.get("deviceId"));
                 jsonObject.put("list",alarmList);
                 jsonObject.put("num",alarmNum);

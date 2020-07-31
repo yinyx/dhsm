@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public interface AlarmService {
 
-    List<HashMap<String,Object>>  getAlarmList(String deviceId);
+    List<HashMap<String,Object>>  getAlarmList(Map<String,Object> map);
 
     int getAlarmNum(String deviceId);
 

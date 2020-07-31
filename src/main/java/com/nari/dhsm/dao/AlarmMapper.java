@@ -19,7 +19,7 @@ public interface AlarmMapper {
      * @param deviceId
      * @return
      */
-    List<HashMap<String,Object>> getAlarmMap(String deviceId);
+    List<HashMap<String,Object>> getAlarmMap(Map<String,Object> map);
 
     /**
      * 根据设备Id获取报警数目
