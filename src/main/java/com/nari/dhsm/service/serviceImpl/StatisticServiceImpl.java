@@ -81,6 +81,12 @@ public class StatisticServiceImpl implements StatisticService {
     }
 
     @Override
+    public List<HashMap<String, Object>> getStationList(){
+        List<HashMap<String, Object>>  StationList = statisticMapper.getStationList();
+        return StationList;
+    }
+
+    @Override
     public String getDeviceNameById(String deviceId){
         String DeviceName = statisticMapper.getDeviceNameById(deviceId);
         return DeviceName;

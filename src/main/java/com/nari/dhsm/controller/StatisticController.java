@@ -183,4 +183,25 @@ public class StatisticController {
             return jsonObject;
         }
     }
+
+    @RequestMapping(value="/getStationList",method= RequestMethod.POST)
+    @ApiOperation("获取全部统计信息")
+    public JSONObject getStationList(@RequestParam Map<String,Object> map){
+        log.info("==== 获取全部统计信息 ====");
+        JSONObject jsonObject = new JSONObject();
+        try{
+            List<HashMap<String, Object>> StationMapList = statisticService.getStationList();
+
+            jsonObject.put("StationMapList",StationMapList);
+
+            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
+
+            return jsonObject;
+        }catch (Exception e){
+            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
+            return jsonObject;
+        }
+    }
 }

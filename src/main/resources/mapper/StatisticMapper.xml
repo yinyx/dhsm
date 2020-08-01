@@ -99,6 +99,12 @@
         </if>
     </select>
 
+    <!-- 获取变电站列表-->
+    <select id="getStationList" resultType="java.util.HashMap">
+        select id,name
+        from info_station
+    </select>
+
     <!-- 根据变电站Id获取所属装置id列表-->
     <select id="getDeviceNameById" resultType="java.lang.String">
         select name

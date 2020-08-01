@@ -71,6 +71,13 @@ public interface StatisticMapper {
     List<String> getDeviceIdList(String stationId);
 
     /**
+     * 获取变电站列表
+     * @param
+     * @return
+     */
+    List<HashMap<String, Object>> getStationList();
+
+    /**
      * 根据装置Id查询装置名称
      * @param deviceId
      * @return

@@ -33,4 +33,6 @@ public interface StatisticService {
     int getModuleNum(Map<String,Object> paramap);
 
     int getModuleHistoryNum(Map<String,Object> paramap);
+
+    List<HashMap<String, Object>> getStationList();
 }
