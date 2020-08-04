@@ -5,10 +5,7 @@ import com.nari.dhsm.service.StatisticService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author zhangheng
@@ -83,6 +80,11 @@ public class StatisticServiceImpl implements StatisticService {
     @Override
     public List<HashMap<String, Object>> getStationList(){
         List<HashMap<String, Object>>  StationList = statisticMapper.getStationList();
+        Iterator<HashMap<String,Object>> iterator = StationList.iterator();
+        while(iterator.hasNext()){
+            HashMap<String,Object> tempMap = iterator.next();
+            tempMap.put("flag",false);
+        }
         return StationList;
     }
 
