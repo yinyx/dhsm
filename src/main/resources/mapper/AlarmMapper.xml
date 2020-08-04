@@ -21,10 +21,10 @@
         <if test='content != null'>
             AND alarm_description like concat(concat('%',#{content}),'%')
         </if>
-        <if test='FaultType != null'>
+        <if test='FaultType != null and FaultType != ""'>
             AND src = #{FaultType}
         </if>
-        <if test='status != null'>
+        <if test='status != null and status != ""'>
             AND alarm_status = #{status}
         </if>
         <if test='startTime != "NaN" and endTime !="NaN"'>
