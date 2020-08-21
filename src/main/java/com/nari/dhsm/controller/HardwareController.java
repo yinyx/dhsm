@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.math.BigDecimal;
 
 /**
  * @author yinyx
@@ -166,6 +168,80 @@ public class HardwareController {
         try {
             List<HashMap<String,Object>> svOnlineList = hardwareService.getSvOnlineList((String) map.get("deviceId"), Integer.parseInt((String)map.get("slot")));
             jsonObject.put("list", svOnlineList);
+            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
+            return jsonObject;
+        }catch (Exception e){
+            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
+            return jsonObject;
+        }
+    }
+
+    @RequestMapping(value="/getSvOnlineSignalScore",method= RequestMethod.POST)
+    @ApiOperation("获取SV/GOOSE实时量评分值")
+    public JSONObject getSvOnlineSignalScore(@RequestParam Map<String,Object> map){
+        log.info("==== 获取SV/GOOSE实时量评分值 ====");
+        JSONObject jsonObject = new JSONObject();
+        try {
+            //List<HashMap<String,Object>> svOnlineList = hardwareService.getSvOnlineList((String) map.get("deviceId"), Integer.parseInt((String)map.get("slot")));
+            List<HashMap<String,Object>> svOnlineList = new ArrayList<>();
+            HashMap<String,Object> svMap =new HashMap<>();
+            float fv = (float)(-30.0);
+            svMap.put("signal_id","sg1232133521");
+            svMap.put("value",fv);
+            svMap.put("id","1");
+            svOnlineList.add(svMap);
+            List<HashMap<String,Object>> scoreList = new ArrayList<>();
+            int index = 0;
+            for (int i=0;i<svOnlineList.size();i++){
+                HashMap<String,Object> svOnlineMap = svOnlineList.get(i);
+                String signalId = (String)svOnlineMap.get("signal_id");
+                if (signalId.equals("sg1232133521")){
+                    float value = (float)svOnlineMap.get("value");
+                    String id = (String)svOnlineMap.get("id");
+                    if ((value>=-19)&&(value<=-15)){
+                        HashMap<String,Object> scoreMap =new HashMap<>();
+                        scoreMap.put("score",1);
+                        scoreMap.put("type",0);
+                        scoreMap.put("id",id);
+                        scoreMap.put("name","光模块"+String.valueOf(index));
+                        scoreList.add(scoreMap);
+                    }
+                    else if (((value>=-21)&&(value<-19))||((value>-15)&&(value<=-13))){
+                        HashMap<String,Object> scoreMap =new HashMap<>();
+                        scoreMap.put("score",0.9);
+                        scoreMap.put("type",1);
+                        scoreMap.put("id",id);
+                        scoreMap.put("name","光模块"+String.valueOf(index));
+                        scoreList.add(scoreMap);
+                    }
+                    else if ((value>=-40)||(value<-21)){
+                        HashMap<String,Object> scoreMap =new HashMap<>();
+                        float score = 90*(value+40)/(19*100);
+                        int   scale  =   2;
+                        int   roundingMode  =  4;
+                        BigDecimal   bd  =   new  BigDecimal((double)score);
+                        bd= bd.setScale(scale,roundingMode);
+                        score = bd.floatValue();
+                        scoreMap.put("score",score);
+                        scoreMap.put("type",2);
+                        scoreMap.put("id",id);
+                        scoreMap.put("name","光模块"+String.valueOf(index));
+                        scoreList.add(scoreMap);
+                    }
+                    else {
+                        HashMap<String,Object> scoreMap =new HashMap<>();
+                        scoreMap.put("score",0);
+                        scoreMap.put("type",3);
+                        scoreMap.put("id",id);
+                        scoreMap.put("name","光模块"+String.valueOf(index));
+                        scoreList.add(scoreMap);
+                    }
+                }
+                index++;
+            }
+            jsonObject.put("list", scoreList);
             jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
             jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
             return jsonObject;
