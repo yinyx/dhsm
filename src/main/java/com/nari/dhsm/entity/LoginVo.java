@@ -1,7 +1,6 @@
 package com.nari.dhsm.entity;
 
 
-import com.sun.istack.internal.NotNull;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.Size;
@@ -17,11 +16,9 @@ public class LoginVo {
 
     private int id;
 
-    @NotNull
     @Size(min=11,max=11,message = "手机号位数不正确")
     private String iphone;
 
-    @NotNull
     @Size(min = 6,message = "密码不能低于6位")
     private String password;
 
