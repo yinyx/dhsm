@@ -1,6 +1,7 @@
 package com.nari.dhsm.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -14,6 +15,6 @@ import java.util.List;
 @Repository
 public interface HistoryMapper {
 
-    List<HashMap<String,Object>> getHistoryList(String deviceId,String signalId);
+    List<HashMap<String,Object>> getHistoryList(@Param("deviceId")String deviceId, @Param("signalId")String signalId);
 
 }

@@ -185,24 +185,11 @@ public class HardwareController {
         JSONObject jsonObject = new JSONObject();
         try {
             List<HashMap<String,Object>> svOnlineList = hardwareService.getSvOnlineList((String) map.get("deviceId"), Integer.parseInt((String)map.get("slot")));
-//            List<HashMap<String,Object>> svOnlineList = new ArrayList<>();
-//            HashMap<String,Object> svMap =new HashMap<>();
-//            float fv = (float)(-21.0);
-//            svMap.put("signal_id","sg1232133521");
-//            svMap.put("value",fv);
-//            svMap.put("id","1");
-//            svOnlineList.add(svMap);
-//            HashMap<String,Object> scMap =new HashMap<>();
-//            float fc = (float)(-30.0);
-//            scMap.put("signal_id","sg1232133522");
-//            scMap.put("value",fc);
-//            scMap.put("id","2");
-//            svOnlineList.add(scMap);
             List<HashMap<String,Object>> scoreList = new ArrayList<>();
             int index = 0;
             for (int i=0;i<svOnlineList.size();i++){
                 HashMap<String,Object> svOnlineMap = svOnlineList.get(i);
-                String signalId = (String)svOnlineMap.get("signal_id");
+                String signalId = (String)svOnlineMap.get("signalId");
                 if (signalId.equals("sg1232133521")){
                     float value = (float)svOnlineMap.get("value");
                     String id = (String)svOnlineMap.get("id");
@@ -246,8 +233,9 @@ public class HardwareController {
                         scoreMap.put("name","光模块"+String.valueOf(index));
                         scoreList.add(scoreMap);
                     }
+                    index++;
                 }
-                index++;
+
             }
             jsonObject.put("list", scoreList);
             jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
