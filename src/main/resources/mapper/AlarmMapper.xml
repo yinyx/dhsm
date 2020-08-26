@@ -27,8 +27,8 @@
         <if test='status != null and status != ""'>
             AND alarm_status = #{status}
         </if>
-        <if test='startTime != "NaN" and endTime !="NaN"'>
-            AND create_time BETWEEN #{startTime} AND #{endTime}
+        <if test='startTime != "" and endTime !="" and startTime != null and endTime !=null and startTime != NaN and endTime !=NaN'>
+            AND create_time BETWEEN #{startTime,jdbcType=TIMESTAMP} AND #{endTime,jdbcType=TIMESTAMP}
         </if>
         AND alarm_flag = 1
         ORDER BY create_time
