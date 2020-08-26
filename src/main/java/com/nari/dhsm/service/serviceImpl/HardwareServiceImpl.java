@@ -112,12 +112,11 @@ public class HardwareServiceImpl  implements HardwareService {
     @Override
     public List<HashMap<String, Object>> getSvOnlineList(String deviceId,int slot) {
         List<HashMap<String,Object>> hardwareList = hardwareMapper.getSvOnlineList(deviceId,slot);
-        Iterator<HashMap<String,Object>> iterator = hardwareList.iterator();
-        while(iterator.hasNext()){
-            HashMap<String,Object> tempMap = iterator.next();
-            tempMap.put("typeName","硬件模块");
-            if(0 == (int)tempMap.get("valid")){
-                tempMap.put("value",null);
+        for (HashMap<String,Object> temp: hardwareList
+             ) {
+            temp.put("typeName","硬件模块");
+            if(0 == (int)temp.get("valid")){
+                temp.put("value",null);
             }
         }
         return hardwareList;
