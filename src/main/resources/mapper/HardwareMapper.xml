@@ -24,7 +24,7 @@
         <result property="monitorItem" column="monitor_item" jdbcType="VARCHAR"/>
         <result property="alarmFlag" column="alarm_flag" jdbcType="INTEGER"/>
         <result property="valueType" column="value_type" jdbcType="INTEGER"/>
-        <result property="value" column="value" jdbcType="FLOAT"/>
+        <result property="value" column="value" jdbcType="DOUBLE"/>
         <result property="signalId" column="signal_id" jdbcType="VARCHAR"/>
         <result property="src" column="src" jdbcType="INTEGER"/>
         <result property="valid" column="valid" jdbcType="INTEGER"/>

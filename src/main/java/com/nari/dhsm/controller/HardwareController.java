@@ -191,7 +191,7 @@ public class HardwareController {
                 HashMap<String,Object> svOnlineMap = svOnlineList.get(i);
                 String signalId = (String)svOnlineMap.get("signalId");
                 if (signalId.equals("sg1232133521")){
-                    float value = (float)svOnlineMap.get("value");
+                    double value = (double) svOnlineMap.get("value");
                     String id = (String)svOnlineMap.get("id");
                     if ((value>=-19)&&(value<=-15)){
                         HashMap<String,Object> scoreMap =new HashMap<>();
@@ -210,9 +210,9 @@ public class HardwareController {
                         scoreMap.put("name","光模块"+String.valueOf(index));
                         scoreList.add(scoreMap);
                     }
-                    else if ((value>=-40)||(value<-21)){
+                    else if ((value>=-40)&&(value<-21)){
                         HashMap<String,Object> scoreMap =new HashMap<>();
-                        float score = 90*(value+40)/(19*100);
+                        double score = 90*(value+40)/(19*100);
                         int   scale  =   2;
                         int   roundingMode  =  4;
                         BigDecimal   bd  =   new  BigDecimal((double)score);
