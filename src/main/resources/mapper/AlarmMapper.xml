@@ -60,13 +60,15 @@
 
     <!-- 根据设备Id,报警记录Id,批次id获取当前批次的所有监测信号值 -->
     <select id="getSignalMap" resultType="java.util.HashMap">
-        select *
-        from dev_history_signal
+        select t1.*,GROUP_CONCAT(t2.`signal_desc`) AS "monitorName"
+        from dev_history_signal t1, dev_online_signal t2
         WHERE 1=1
         <if test='deviceId != null'>
-            AND device = #{deviceId,jdbcType=VARCHAR}
+            AND t1.device = #{deviceId,jdbcType=VARCHAR}
         </if>
-        AND call_id = #{callId}
-        AND id != #{alarmId}
+        AND t1.call_id = #{callId}
+        AND t1.id != #{alarmId}
+        AND t1.signal_id=t2.id
+        GROUP BY t1.id
     </select>
 </mapper>
