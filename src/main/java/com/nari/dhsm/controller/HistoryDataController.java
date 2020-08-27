@@ -37,7 +37,7 @@ public class HistoryDataController {
         log.info("==== 获取历史信号列表 ====");
         JSONObject jsonObject = new JSONObject();
         try {
-            HashMap<String, Object> historySignal = historyService.getHistorySignalList((String) map.get("deviceId"),(String)map.get("signalId"));
+            HashMap<String, Object> historySignal = historyService.getHistorySignalList((String) map.get("deviceId"),(String)map.get("id"));
             if(historySignal != null) {
                 jsonObject.put("list", historySignal);
                 jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());

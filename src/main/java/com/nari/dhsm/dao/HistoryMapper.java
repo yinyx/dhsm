@@ -15,6 +15,6 @@ import java.util.List;
 @Repository
 public interface HistoryMapper {
 
-    List<HashMap<String,Object>> getHistoryList(@Param("deviceId")String deviceId, @Param("signalId")String signalId);
+    List<HashMap<String,Object>> getHistoryList(@Param("deviceId")String deviceId, @Param("id")String id);
 
 }

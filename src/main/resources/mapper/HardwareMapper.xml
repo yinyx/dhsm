@@ -34,6 +34,11 @@
         <result property="slot" column="slot" jdbcType="INTEGER"/>
         <result property="pluginType" column="plugin_type" jdbcType="VARCHAR"/>
         <result property="valueUnit" column="value_unit" jdbcType="VARCHAR"/>
+        <result property="maxValue" column="max_value" jdbcType="VARCHAR"/>
+        <result property="minValue" column="min_value" jdbcType="VARCHAR"/>
+        <result property="typicalValue" column="typical_value" jdbcType="VARCHAR"/>
+        <result property="alarmThreshold" column="alarm_threshold" jdbcType="FLOAT"/>
+        <result property="defaultValue" column="default_value" jdbcType="FLOAT"/>
 
     </resultMap>
 
@@ -59,21 +64,26 @@
 
     <select id="getPwrOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -87,21 +97,26 @@
 
     <select id="getAdcOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -115,21 +130,26 @@
 
     <select id="getAiOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -143,21 +163,26 @@
 
     <select id="getBiOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -165,27 +190,32 @@
           WHERE
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
-            d2.plugin_type = '智能BI'
+            d2.plugin_type = 'BI'
             ORDER BY d1.signal_id
     </select>
 
     <select id="getBoOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -193,27 +223,32 @@
           WHERE
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
-            d2.plugin_type = '智能BO'
+            d2.plugin_type = 'BO'
             ORDER BY d1.signal_id
     </select>
 
     <select id="getLcdOnlineList" resultMap="PluginOnlineResultMap">
-        SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+        SSELECT
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -227,21 +262,26 @@
 
     <select id="getSvOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.value_unit
-          ,d1.signal_desc as monitor_item
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -255,21 +295,26 @@
 
     <select id="getCpuOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -283,21 +328,26 @@
 
     <select id="getBoxOnlineList" resultMap="PluginOnlineResultMap">
         SELECT
-          d1.id
-          ,d1.device
-          ,d1.board_id
-          ,d1.alarm_flag
-          ,d1.value
-          ,d1.signal_id
-          ,d1.src
-          ,d1.valid
-          ,i1.model
-          ,i1.name
-          ,b1.slot
-          ,b1.plugin_type
-          ,d2.value_type
-          ,d2.monitor_item
-          ,d2.value_unit
+              d1.id
+              ,d1.device
+              ,d1.board_id
+              ,d1.alarm_flag
+              ,d1.value
+              ,d1.signal_id
+              ,d1.src
+              ,d1.valid
+              ,i1.model
+              ,i1.name
+              ,b1.slot
+              ,b1.plugin_type
+              ,d2.value_type
+              ,d2.value_unit
+              ,d1.signal_desc as monitor_item
+              ,d2.max_value
+              ,d2.min_value
+              ,d2.alarm_threshold
+              ,d2.typical_value
+              ,d2.default_value
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id

@@ -4,20 +4,20 @@
 <mapper namespace="com.nari.dhsm.dao.HistoryMapper">
 
     <resultMap id="valueMap" type="java.util.HashMap">
-        <result property="value" column="value" jdbcType="FLOAT"/>
+        <result property="value" column="history_value" jdbcType="FLOAT"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <select id="getHistoryList" resultMap="valueMap">
         select
                 create_time,
-                any_value(value) as value
+                history_value
             from dev_history_signal
             where device = #{deviceId,jdbcType=VARCHAR}
-            AND signal_id = #{signalId,jdbcType=VARCHAR}
+            AND signal_id = #{id,jdbcType=VARCHAR}
 				group by create_time
 				order by create_time
-			  	limit 7
+			  	limit 15
     </select>
 
 </mapper>

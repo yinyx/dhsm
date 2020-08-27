@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface HistoryService {
 
-   HashMap<String,Object> getHistorySignalList(String deviceId,String signalId);
+   HashMap<String,Object> getHistorySignalList(String deviceId,String id);
 
 }

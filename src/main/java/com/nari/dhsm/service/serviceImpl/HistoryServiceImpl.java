@@ -22,12 +22,12 @@ public class HistoryServiceImpl implements HistoryService {
 
 
     @Override
-    public HashMap<String, Object> getHistorySignalList(String deviceId, String signalId) {
-        List<HashMap<String, Object>> mapList = historyMapper.getHistoryList(deviceId,signalId);
+    public HashMap<String, Object> getHistorySignalList(String deviceId, String id){
+        List<HashMap<String, Object>> mapList = historyMapper.getHistoryList(deviceId,id);
         List<String> timeList = new ArrayList<>();
         List<String> valueList = new ArrayList<>();
         for (HashMap<String,Object> dataMap: mapList) {
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat formatter = new SimpleDateFormat();
             String createTime = formatter.format(dataMap.get("createTime"));
             timeList.add(createTime);
             valueList.add(dataMap.get("value").toString());
