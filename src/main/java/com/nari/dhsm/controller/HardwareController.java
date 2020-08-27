@@ -198,6 +198,7 @@ public class HardwareController {
                         scoreMap.put("score",1);
                         scoreMap.put("type",0);
                         scoreMap.put("id",id);
+                        scoreMap.put("color","green");
                         scoreMap.put("name","光模块"+String.valueOf(index));
                         scoreList.add(scoreMap);
                     }
@@ -230,6 +231,7 @@ public class HardwareController {
                         scoreMap.put("score",0);
                         scoreMap.put("type",3);
                         scoreMap.put("id",id);
+                        scoreMap.put("color","red");
                         scoreMap.put("name","光模块"+String.valueOf(index));
                         scoreList.add(scoreMap);
                     }
