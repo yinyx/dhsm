@@ -41,4 +41,6 @@ public interface AlarmMapper {
      * @return
      */
     List<HashMap<String,Object>>  getSignalMap(Map<String,Object> map);
+
+    int getSignalNum(Map<String,Object> map);
 }

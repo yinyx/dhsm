@@ -18,4 +18,6 @@ public interface AlarmService {
 
     List<HashMap<String,Object>> getSignalList(Map<String,Object> map);
 
+    int getSignalNum(Map<String,Object> map);
+
 }

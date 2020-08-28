@@ -67,8 +67,27 @@
             AND t1.device = #{deviceId,jdbcType=VARCHAR}
         </if>
         AND t1.call_id = #{callId}
+        <if test='ModuleType != null'>
+        AND t1.signal_type = #{ModuleType}
+        </if>
         AND t1.id != #{alarmId}
         AND t1.signal_id=t2.id
         GROUP BY t1.id
+        LIMIT
+        #{startRecord,jdbcType=INTEGER},#{lengthRecord,jdbcType=INTEGER}
+    </select>
+
+    <select id="getSignalNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_history_signal
+        WHERE 1=1
+        <if test='deviceId != null'>
+            AND device = #{deviceId,jdbcType=VARCHAR}
+        </if>
+        AND call_id = #{callId}
+        <if test='ModuleType != null'>
+            AND signal_type = #{ModuleType}
+        </if>
+        AND id != #{alarmId}
     </select>
 </mapper>

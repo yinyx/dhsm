@@ -79,8 +79,16 @@ public class AlarmController {
         log.info("==== 获取报警同批次上召信息 ====");
         JSONObject jsonObject = new JSONObject();
         try{
+            String start = (String)map.get("startRecord");
+            int startRecord = Integer.parseInt(start);
+            map.put("startRecord", startRecord);
+            String length = (String)map.get("lengthRecord");
+            int lengthRecord = Integer.parseInt(length);
+            map.put("lengthRecord", lengthRecord);
             List<HashMap<String,Object>> signalList = alarmService.getSignalList(map);
+            int signalNum = alarmService.getSignalNum(map);
             jsonObject.put("data",signalList);
+            jsonObject.put("num",signalNum);
             jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
             jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
             return jsonObject;
