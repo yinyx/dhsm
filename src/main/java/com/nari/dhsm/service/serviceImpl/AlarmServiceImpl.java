@@ -41,4 +41,10 @@ public class AlarmServiceImpl implements AlarmService {
         signalList = alarmMapper.getSignalMap(map);
         return signalList;
     }
+
+    @Override
+    public int getSignalNum(Map<String,Object> map){
+        int SignalNum = alarmMapper.getSignalNum(map);
+        return SignalNum;
+    }
 }
