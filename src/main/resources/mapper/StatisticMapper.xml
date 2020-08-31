@@ -105,6 +105,16 @@
         from info_station
     </select>
 
+    <!-- 获取PWR板卡配置列表-->
+    <select id="getPWRCfgList" resultType="java.util.HashMap">
+        SELECT t1.board_type,t1.id
+        FROM info_plugin_config t1
+        LEFT join info_protect_device t2
+        on t1.device = t2.id
+        and t2.station_id = #{stationId,jdbcType=VARCHAR}
+        where plugin_type=#{moduleName,jdbcType=VARCHAR}
+    </select>
+
     <!-- 根据变电站Id获取所属装置id列表-->
     <select id="getDeviceNameById" resultType="java.lang.String">
         select name
@@ -139,5 +149,15 @@
         AND alarm_flag = 1
         AND signal_type = #{moduleIndex}
         AND create_time between #{start_time} and #{end_time}
+    </select>
+
+    <!-- 根据板卡类型查询实时监测信号故障数量-->
+    <select id="getPwrDetailNum" resultType="java.lang.Integer">
+        select count(1)
+        from dev_online_signal
+        WHERE 1=1
+        AND alarm_flag = 1
+        AND board_id = #{PWRId}
+        AND valid = 1
     </select>
 </mapper>

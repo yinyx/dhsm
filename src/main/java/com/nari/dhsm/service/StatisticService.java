@@ -35,4 +35,12 @@ public interface StatisticService {
     int getModuleHistoryNum(Map<String,Object> paramap);
 
     List<HashMap<String, Object>> getStationList();
+
+    List<HashMap<String, Object>> getPWRCfgList(String stationId, String moduleName);
+
+    int getPwrDetailNum(String PWRId);
+
+    //List<HashMap<String, Object>> getADCCfgList(String stationId);
+
+    //int getAdcDetailNum(String ADCId);
 }

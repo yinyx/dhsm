@@ -104,6 +104,17 @@ public class StatisticController {
                 PwrModuleMonthList.add(ModuleNum);
             }
 
+            //获取模块细节
+            List<String> PWRDetailList = getModuleDetailList(stationId,"PWR");
+            List<String> ADCDetailList = getModuleDetailList(stationId,"PWR");
+            List<String> AIDetailList = getModuleDetailList(stationId,"AI");
+            List<String> BIDetailList = getModuleDetailList(stationId,"BI");
+            List<String> BODetailList = getModuleDetailList(stationId,"BO");
+            List<String> LCDDetailList = getModuleDetailList(stationId,"LCD");
+            List<String> GOOSEDetailList = getModuleDetailList(stationId,"SV/GOOSE");
+            List<String> CPUDetailList = getModuleDetailList(stationId,"CPU");
+            List<String> ShelfDetailList = getModuleDetailList(stationId,"机箱");
+
                 jsonObject.put("StationName",StationName);
                 jsonObject.put("DeviceNum",DeviceNum);
                 jsonObject.put("OnlineDeviceNum",OnlineDeviceNum);
@@ -115,6 +126,15 @@ public class StatisticController {
                 jsonObject.put("HardNumList",HardNumList);
                 jsonObject.put("ModuleNumList",ModuleNumList);
                 jsonObject.put("PwrModuleMonthList",PwrModuleMonthList);
+                jsonObject.put("PWRDetailList",PWRDetailList);
+                jsonObject.put("ADCDetailList",ADCDetailList);
+                jsonObject.put("AIDetailList",AIDetailList);
+                jsonObject.put("BIDetailList",BIDetailList);
+                jsonObject.put("BODetailList",BODetailList);
+                jsonObject.put("LCDDetailList",LCDDetailList);
+                jsonObject.put("GOOSEDetailList",GOOSEDetailList);
+                jsonObject.put("CPUDetailList",CPUDetailList);
+                jsonObject.put("ShelfDetailList",ShelfDetailList);
 
                 jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
                 jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
@@ -125,6 +145,28 @@ public class StatisticController {
             jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
             return jsonObject;
         }
+    }
+
+    private List<String> getModuleDetailList(String stationId, String ModuleName)
+    {
+        List<String> PWRDetailList = new ArrayList<>();
+        List<HashMap<String, Object>> PwrCfgMapList = statisticService.getPWRCfgList(stationId,ModuleName);
+        int len = PwrCfgMapList.size();
+        int i = 0;
+        for (HashMap<String,Object> temp: PwrCfgMapList
+        ) {
+            i++;
+            String PWRName = (String)temp.get("board_type");
+            String PWRId = (String)temp.get("id");
+            int PWRNum = statisticService.getPwrDetailNum(PWRId);
+            String combine = PWRName+":"+String.valueOf(PWRNum);
+            if (i<len)
+            {
+                combine = combine+"<br>";
+            }
+            PWRDetailList.add(combine);
+        }
+        return PWRDetailList;
     }
 
     @RequestMapping(value="/getModuleHistoryList",method= RequestMethod.POST)

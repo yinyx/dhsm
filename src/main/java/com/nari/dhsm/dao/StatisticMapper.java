@@ -1,6 +1,7 @@
 package com.nari.dhsm.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -63,6 +64,8 @@ public interface StatisticMapper {
      */
     int getHardDeviceFaultNum(String deviceId);
 
+    int getPwrDetailNum(String PWRId);
+
     /**
      * 根据变电站Id获取所属装置id列表
      * @param stationId
@@ -76,7 +79,7 @@ public interface StatisticMapper {
      * @return
      */
     List<HashMap<String, Object>> getStationList();
-
+    List<HashMap<String, Object>> getPWRCfgList(@Param("stationId")String stationId, @Param("moduleName")String moduleName);
     /**
      * 根据装置Id查询装置名称
      * @param deviceId

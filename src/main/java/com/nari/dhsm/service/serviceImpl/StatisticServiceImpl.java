@@ -89,6 +89,12 @@ public class StatisticServiceImpl implements StatisticService {
     }
 
     @Override
+    public List<HashMap<String, Object>> getPWRCfgList(String stationId, String moduleName){
+        List<HashMap<String, Object>>  PWRCfgList = statisticMapper.getPWRCfgList(stationId, moduleName);
+        return PWRCfgList;
+    }
+
+    @Override
     public String getDeviceNameById(String deviceId){
         String DeviceName = statisticMapper.getDeviceNameById(deviceId);
         return DeviceName;
@@ -98,6 +104,12 @@ public class StatisticServiceImpl implements StatisticService {
     public int getSoftNumById(String deviceId){
         int SoftNum = statisticMapper.getSoftDeviceFaultNum(deviceId);
         return SoftNum;
+    }
+
+    @Override
+    public int getPwrDetailNum(String PWRId){
+        int PwrDetailNum = statisticMapper.getPwrDetailNum(PWRId);
+        return PwrDetailNum;
     }
 
     @Override
