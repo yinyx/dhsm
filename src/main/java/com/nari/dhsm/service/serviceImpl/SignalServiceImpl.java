@@ -56,11 +56,11 @@ public class SignalServiceImpl implements SignalService {
             if(((int) temp.get("valid") == 0) ){
                 temp.put("value",null);
             }
-            if(("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (float)temp.get("value"))){
+            if(("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (double)temp.get("value"))){
                 temp.put("bjj",0);
                 temp.put("bsj",1);
             }
-            if(!("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (float)temp.get("value"))){
+            if(!("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (double)temp.get("value"))){
                 temp.put("bjj",0);
                 temp.put("bsj",0);
             }
