@@ -14,6 +14,7 @@
         <result property="description" column="description" jdbcType="VARCHAR"/>
         <result property="model" column="model" jdbcType="VARCHAR"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="ipAddress" column="ip_address" jdbcType="VARCHAR"/>
     </resultMap>
 
 
@@ -22,13 +23,14 @@
           s1.id,
           s1.device,
           s1.alarm_flag,
-          value,
+          s1.value,
           signal_id,
           src,
           valid,
           s1.signal_desc as description,
           d1.model,
-          d1.name
+          d1.name,
+          d1.ip_address
         FROM dev_online_signal s1
         LEFT JOIN info_protect_device d1 on s1.device = d1.id
         WHERE device = #{deviceId,jdbcType=VARCHAR}
@@ -48,7 +50,8 @@
           valid,
           s1.signal_desc as description,
           d1.model,
-          d1.name
+          d1.name,
+          d1.ip_address
         FROM dev_online_signal s1
         LEFT JOIN info_protect_device d1 on s1.device = d1.id
         WHERE device = #{deviceId,jdbcType=VARCHAR}

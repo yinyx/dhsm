@@ -95,7 +95,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'PWR'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getAdcOnlineList" resultMap="PluginOnlineResultMap">
@@ -129,7 +129,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'ADC'
-            ORDER BY d1.signal_id
+           ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getAiOnlineList" resultMap="PluginOnlineResultMap">
@@ -163,7 +163,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'AI'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getBiOnlineList" resultMap="PluginOnlineResultMap">
@@ -197,7 +197,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'BI'
-            ORDER BY d1.signal_id
+           ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getBoOnlineList" resultMap="PluginOnlineResultMap">
@@ -231,7 +231,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'BO'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getLcdOnlineList" resultMap="PluginOnlineResultMap">
@@ -265,7 +265,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'LCD'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getSvOnlineList" resultMap="PluginOnlineResultMap">
@@ -299,7 +299,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'SV/GOOSE'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getCpuOnlineList" resultMap="PluginOnlineResultMap">
@@ -333,7 +333,7 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = 'CPU'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 
     <select id="getBoxOnlineList" resultMap="PluginOnlineResultMap">
@@ -367,6 +367,6 @@
             d1.device = #{deviceId,jdbcType=VARCHAR} AND
             b1.slot = #{slot,jdbcType=INTEGER} AND
             d2.plugin_type = '机箱'
-            ORDER BY d1.signal_id
+            ORDER BY d1.signal_id,monitor_item
     </select>
 </mapper>
