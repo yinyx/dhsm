@@ -19,6 +19,7 @@
 
     <resultMap id="PluginOnlineResultMap" type="java.util.HashMap">
         <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="ipAddress" column="ip_address" jdbcType="VARCHAR"/>
         <result property="deviceId" column="device" jdbcType="VARCHAR"/>
         <result property="boardId" column="board_id" jdbcType="INTEGER"/>
         <result property="monitorItem" column="monitor_item" jdbcType="VARCHAR"/>
@@ -39,6 +40,7 @@
         <result property="typicalValue" column="typical_value" jdbcType="VARCHAR"/>
         <result property="alarmThreshold" column="alarm_threshold" jdbcType="FLOAT"/>
         <result property="defaultValue" column="default_value" jdbcType="FLOAT"/>
+        <result property="ipAddress" column="ip_address" jdbcType="VARCHAR"/>
 
     </resultMap>
 
@@ -84,6 +86,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -117,6 +120,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -150,6 +154,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -183,6 +188,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -216,6 +222,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -249,6 +256,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -282,6 +290,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -315,6 +324,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
@@ -348,6 +358,7 @@
               ,d2.alarm_threshold
               ,d2.typical_value
               ,d2.default_value
+              ,i1.ip_address
           from dev_online_signal d1
           left join info_protect_device i1 on d1.device = i1.id
           left join dev_hardware_template d2 on d1.signal_id = d2.id
