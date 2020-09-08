@@ -26,16 +26,15 @@
           signal_id,
           src,
           valid,
-          COALESCE(s2.description,s3.description) as description,
+          s1.signal_desc as description,
           d1.model,
           d1.name
         FROM dev_online_signal s1
-        LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id
-        LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id
         LEFT JOIN info_protect_device d1 on s1.device = d1.id
         WHERE device = #{deviceId,jdbcType=VARCHAR}
-				AND (s2.type = #{type,jdbcType=INTEGER} or s3.type=#{type,jdbcType=INTEGER})
+				AND s1.signal_type = #{type,jdbcType=INTEGER}
         AND src != 0
+        ORDER BY signal_id, description
     </select>
 
     <select id="getOtherSignalList" resultMap="BlockSignalResultMap">
@@ -43,20 +42,19 @@
           s1.id,
           s1.device,
           s1.alarm_flag,
-          value,
+          s1.value,
           signal_id,
           src,
           valid,
-          COALESCE(s2.description,s3.description) as description,
+          s1.signal_desc as description,
           d1.model,
           d1.name
         FROM dev_online_signal s1
-        LEFT JOIN dev_monitor_signal_template s2 on s1.signal_id = s2.id
-        LEFT JOIN dev_combine_signal_template s3 on s1.signal_id = s3.id
         LEFT JOIN info_protect_device d1 on s1.device = d1.id
         WHERE device = #{deviceId,jdbcType=VARCHAR}
-				AND (s2.type = #{type,jdbcType=INTEGER} or s3.type=#{type,jdbcType=INTEGER})
+				AND s1.signal_type = #{type,jdbcType=INTEGER}
         AND src != 0
+        ORDER by signal_id,description
     </select>
 
 

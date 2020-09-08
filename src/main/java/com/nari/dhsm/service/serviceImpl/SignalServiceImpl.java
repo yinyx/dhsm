@@ -33,10 +33,10 @@ public class SignalServiceImpl implements SignalService {
                 case 1:
                     temp.put("typeName","告警信号");
                     break;
-                default:
+                default: break;
             }
             if(((int) temp.get("valid") == 0) ){
-                temp.put("value",null);
+                temp.put("value","无效");
             }
             rtnList.add(temp);
         }
@@ -51,18 +51,21 @@ public class SignalServiceImpl implements SignalService {
                 case 2:
                     temp.put("typeName","智能板卡报警闭锁信号");
                     break;
-                default:
-            }
-            if(((int) temp.get("valid") == 0) ){
-                temp.put("value",null);
+                default: break;
             }
             if(("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (double)temp.get("value"))){
                 temp.put("bjj",0);
                 temp.put("bsj",1);
             }
-            if(!("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (double)temp.get("value"))){
+            else if(!("mergedno000005".equals(temp.get("signalId")))&&(1.0 == (double)temp.get("value"))){
                 temp.put("bjj",0);
                 temp.put("bsj",0);
+            }else{
+                temp.put("bjj",0);
+                temp.put("bsj",0);
+            }
+            if(((int) temp.get("valid") == 0) ){
+                temp.put("value","无效");
             }
             rtnList.add(temp);
         }
