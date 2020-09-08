@@ -246,4 +246,26 @@ public class StatisticController {
             return jsonObject;
         }
     }
+
+    @RequestMapping(value="/InfraredMonitor",method= RequestMethod.POST)
+    @ApiOperation("启动红外监视程序")
+    public JSONObject InfraredMonitor(){
+        log.info("==== 启动红外监视程序 ====");
+        JSONObject jsonObject = new JSONObject();
+        try{
+            String cmd = "/home/nari/temp/sample_centos/run.sh";
+            //string cmd = "cmd /c  D:\\install.exe";
+            System.out.println(cmd);
+            final Process p = Runtime.getRuntime().exec(cmd);
+
+            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
+
+            return jsonObject;
+        }catch (Exception e){
+            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
+            return jsonObject;
+        }
+    }
 }
