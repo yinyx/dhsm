@@ -4,6 +4,8 @@ import com.nari.dhsm.dao.AlarmMapper;
 import com.nari.dhsm.service.AlarmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -31,6 +33,7 @@ public class AlarmServiceImpl implements AlarmService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void setAlarmStatus(Map<String,Object> map){
         alarmMapper.setAlarmStatus(map);
     }
