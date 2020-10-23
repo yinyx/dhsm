@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import com.nari.dhsm.mqtt.MsgSender;
+
 /**
  * @author yinyx
  * @version 1.0 2020/7/20
@@ -19,6 +21,9 @@ public class HardwareServiceImpl  implements HardwareService {
 
     @Autowired
     HardwareMapper hardwareMapper;
+
+    @Autowired
+    MsgSender sender;
 
     @Override
     public List<PluginTemplate> getPluginTemplateList(String pluginType) {
@@ -148,5 +153,10 @@ public class HardwareServiceImpl  implements HardwareService {
             }
         }
         return hardwareList;
+    }
+
+    @Override
+    public void sendDirectOrder(int indexno){
+       sender.sendDirectOrder(indexno);
     }
 }

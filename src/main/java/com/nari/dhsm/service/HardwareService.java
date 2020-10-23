@@ -32,4 +32,6 @@ public interface HardwareService {
 
     List<HashMap<String,Object>> getBoxOnlineList(String deviceId,int slot);
 
+    void sendDirectOrder(int indexno);
+
 }

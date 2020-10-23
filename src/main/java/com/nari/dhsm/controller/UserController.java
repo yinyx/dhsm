@@ -67,4 +67,5 @@ public class UserController {
         jsonObject.put("message",ErrorCodeEnum.E00_0001.getMessage());
         return jsonObject;
     }
+
 }

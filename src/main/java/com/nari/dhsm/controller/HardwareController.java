@@ -285,4 +285,24 @@ public class HardwareController {
             return jsonObject;
         }
     }
+
+    @RequestMapping(value="/sendDirectOrder",method= RequestMethod.POST)
+    @ApiOperation("向轨道发送控制命令")
+    public JSONObject sendDirectOrder(@RequestParam Map<String,Object> map){
+        log.info("==== 向轨道发送控制命令 ====");
+        JSONObject jsonObject = new JSONObject();
+        try {
+            int indexno = Integer.parseInt((String)map.get("indexno"));
+            hardwareService.sendDirectOrder(indexno);
+           // List<PluginTemplate> pluginTemplatesList = hardwareService.getPluginTemplateList((String)map.get("pluginType"));
+            //jsonObject.put("list", pluginTemplatesList);
+            jsonObject.put("code", ErrorCodeEnum.E00_0001.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0001.getMessage());
+            return jsonObject;
+        }catch (Exception e){
+            jsonObject.put("code", ErrorCodeEnum.E00_0002.getCode());
+            jsonObject.put("message", ErrorCodeEnum.E00_0002.getMessage());
+            return jsonObject;
+        }
+    }
 }
