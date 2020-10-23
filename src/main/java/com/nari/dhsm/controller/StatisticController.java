@@ -253,7 +253,7 @@ public class StatisticController {
         log.info("==== 启动红外监视程序 ====");
         JSONObject jsonObject = new JSONObject();
         try{
-            String cmd = "/home/nari/temp/sample_centos/run.sh";
+            String cmd = "/home/nari/front_camera/testdemo/start.sh";
             //string cmd = "cmd /c  D:\\install.exe";
             System.out.println(cmd);
             final Process p = Runtime.getRuntime().exec(cmd);
